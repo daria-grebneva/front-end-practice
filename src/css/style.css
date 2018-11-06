@@ -68,20 +68,6 @@ body {
     padding-top: 400px;
 }
 
-.img_responsive {
-    /*background: url(../images/image.png) center 0 no-repeat;*/
-    /*width: 100%;*/
-    /*background-size: cover;*/
-    /*padding-top: 350px;*/
-    width: 330px;
-    height: 350px;
-}
-
-.img_container {
-    /*width: 330px;*/
-    /*height: 350px;*/
-}
-
 .clear {
     clear: both;
 }
@@ -97,4 +83,19 @@ body {
     width: 570px;
     margin-right: 20px;
     /*float: left;*/
+}
+
+
+.img_wrapper {
+    width: 330px;
+    height: 350px;
+    margin-top: -190px;
+}
+
+.img_wrapper .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 45% 50%;
+    border-radius: 5px;
 }
