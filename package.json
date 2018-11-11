@@ -1,0 +1,27 @@
+{
+  "name": "front-end-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daria-grebneva/front-end-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daria-grebneva/front-end-practice/issues"
+  },
+  "homepage": "https://github.com/daria-grebneva/front-end-practice#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

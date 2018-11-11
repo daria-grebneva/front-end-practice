@@ -1,0 +1,145 @@
+@import "consts";
+
+body
+{
+  margin: 0;
+}
+
+.main_container
+{
+  margin: 0 auto;
+  min-height: 100%;
+  height: 100%;
+}
+
+.container
+{
+  width: 960px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto;
+  z-index: 2;
+  position: relative;
+  display: flex;
+}
+
+.header {
+  height: 50px;
+
+  &_list {
+    display: flex;
+  }
+
+  &_item {
+    padding: 14.5px 20px;
+    list-style-type: none;
+    font: 19px $georgia;
+
+    &:first-child {
+      background-color: $light-green;
+      color: $white;
+    }
+  }
+}
+
+
+
+.list {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.icon-image {
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}
+
+.about_me {
+  background: url(../images/about-me-icon.png) no-repeat;
+}
+
+.hobby {
+  background: url(../images/hobby-icon.png) no-repeat;
+}
+
+.video {
+  background: url(../images/video-icon.png) no-repeat;
+}
+
+.top_bg {
+  background: url(../images/background.png) center 0 no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.personal_information_with_photo {
+  width: 330px;
+}
+
+.personal_information {
+  width: 500px;
+  margin: -170px 20px 0 60px;
+}
+
+.quote {
+  font: italic 28px $georgia;
+  line-height: 42px;
+  color: $white;
+
+  &_author {
+    font: bold 16px/42px $open-sans;
+    line-height: 42px;
+    color: $dark-white;
+  }
+}
+
+.img_wrapper {
+  width: 330px;
+  height: 350px;
+  margin-top: -190px;
+}
+
+.img_wrapper .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: 45% 50%;
+  border-radius: 5px;
+}
+
+.favorites_header {
+  font: bold 24px $open-sans;
+  line-height: 32px;
+  color: $green;
+}
+
+.favorites_text {
+  font: 19px $georgia;
+  line-height: 36px;
+  color: $grey;
+  margin-left: 20px;
+}
