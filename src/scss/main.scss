@@ -92,17 +92,58 @@ body
   }
 }
 
-.clear {
+.clear
+{
   clear: both;
 }
 
-.personal_information_with_photo {
-  width: 330px;
-}
+.personal_information
+{
+    width: 570px;
+    margin: -165px 20px 0 60px;
+    &_with_photo
+    {
+        width: 330px;
+    }
 
-.personal_information {
-  width: 500px;
-  margin: -170px 20px 0 60px;
+    &_container
+    {
+        margin-top: 90px;
+    }
+
+    .title
+    {
+        &_name
+        {
+            font: bold 48px/42px $open-sans;
+            color: $dark-grey;
+            margin-left: 5px;
+        }
+
+        &_hobbie
+        {
+            font: 36px/42px $open-sans;
+            color: $dark-grey;
+        }
+    }
+
+    .line
+    {
+        border: 3px solid $green;
+        border-radius: 3px;
+        width: 55px;
+        margin-top: 24px;
+        margin-bottom: 43px;
+    }
+
+    .text
+    {
+        font: 19px/ 32px $georgia;
+        color: $grey;
+        margin-top: 15px;
+        margin-bottom: 43px;
+    }
+
 }
 
 .quote {
@@ -143,3 +184,4 @@ body
   color: $grey;
   margin-left: 20px;
 }
+
