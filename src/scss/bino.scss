@@ -7,10 +7,14 @@ body {
 .container
 {
   width: 1170px;
+  margin: 0 auto;
 }
 
 .header
 {
+  display: flex;
+  justify-content: space-between;
+
   &__logo
   {
     padding: 20px 0;
@@ -20,7 +24,7 @@ body {
 
   &__menu
   {
-    padding: 40px 30px;
+    padding: 30px 0;
   }
 }
 
@@ -28,10 +32,76 @@ body {
 {
   font: bold 14px/14px $open-sans;
   color: $white;
+
+  &__uppercase
+  {
+    text-transform: uppercase;
+  }
+
+  &__list
+  {
+    list-style-type: none;
+    display: flex;
+
+    &_item
+    {
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:hover
+      {
+        color: $bino-red;
+        border-bottom: 1px solid $bino-red;
+        padding-bottom: 22px;
+
+      }
+      &:last-child
+      {
+        padding-right: 0;
+      }
+    }
+  }
 }
 
-.top
+
+.top {
+  background: url(../images/bino/background-top.png) center 0 no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 990px;
+  position: relative;
+
+  //&__after {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background: rgba(0, 0, 0, .5);
+  //}
+
+  &__content
+  {
+    text-align: center;
+    margin-top: 195px;
+
+    &_inscription
+    {
+        font: 24px $source-sans;
+        color: rgb(244, 245, 249);
+        line-height: 1.2;
+
+    }
+    &_title {
+      font: bold 72px $open-sans;
+      color: rgb(244, 245, 249);
+    }
+
+  }
+}
+
+.clear
 {
-  background: url("../images/bino/background-top.png") no-repeat;
+  clear: both;
 }
-
