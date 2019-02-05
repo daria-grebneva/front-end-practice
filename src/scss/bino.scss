@@ -1,0 +1,37 @@
+@import "consts";
+
+body {
+  margin: 0;
+}
+
+.container
+{
+  width: 1170px;
+}
+
+.header
+{
+  &__logo
+  {
+    padding: 20px 0;
+    width: 141px;
+    height: 52px;
+  }
+
+  &__menu
+  {
+    padding: 40px 30px;
+  }
+}
+
+.text
+{
+  font: bold 14px/14px $open-sans;
+  color: $white;
+}
+
+.top
+{
+  background: url("../images/bino/background-top.png") no-repeat;
+}
+
