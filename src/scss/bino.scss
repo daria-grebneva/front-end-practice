@@ -4,65 +4,71 @@ body {
   margin: 0;
 }
 
-.container
-{
+.container {
   width: 1170px;
   margin: 0 auto;
+  
+  &__content
+  {
+    float: left;
+  }
 }
 
-.header
-{
-  display: flex;
-  justify-content: space-between;
+.header {
 
-  &__logo
-  {
+  &__logo {
+    float: left;
     padding: 20px 0;
     width: 141px;
     height: 52px;
   }
 
-  &__menu
-  {
+  &__menu {
     padding: 30px 0;
+    float: right;
   }
 }
 
-.text
+.title
 {
+  font: bold 36px $source-sans;
+  line-height: 1.2;
+
+  &__border_red
+  {
+    border-left: 5px solid $bino-red;
+    padding-left: 30px;
+  }
+}
+
+.text {
   font: bold 14px/14px $open-sans;
   color: $white;
 
-  &__uppercase
-  {
+  &__uppercase {
     text-transform: uppercase;
   }
 
-  &__list
-  {
+  &__list {
     list-style-type: none;
     display: flex;
 
-    &_item
-    {
+    &_item {
       margin-right: 30px;
       cursor: pointer;
+      padding-bottom: 23px;
 
-      &:hover
-      {
+      &:hover {
         color: $bino-red;
         border-bottom: 1px solid $bino-red;
         padding-bottom: 22px;
-
       }
-      &:last-child
-      {
+      &:last-child {
         padding-right: 0;
       }
     }
   }
 }
-
 
 .top {
   background: url(../images/bino/background-top.png) center 0 no-repeat;
@@ -70,38 +76,321 @@ body {
   background-size: cover;
   height: 990px;
   position: relative;
+  text-align: center;
 
-  //&__after {
-  //  content: '';
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  right: 0;
-  //  bottom: 0;
-  //  background: rgba(0, 0, 0, .5);
-  //}
-
-  &__content
-  {
+  &__content {
     text-align: center;
     margin-top: 195px;
 
-    &_inscription
+    &_wrapper
     {
-        font: 24px $source-sans;
-        color: rgb(244, 245, 249);
-        line-height: 1.2;
+      display: inline-block;
+    }
+
+    &_inscription {
+      font: 24px $source-sans;
+      color: $bino-white;
+      line-height: 1.2;
 
     }
     &_title {
       font: bold 72px $open-sans;
-      color: rgb(244, 245, 249);
+      color: $bino-white;
+      margin: 50px 0 45px;
+    }
+
+    &_text {
+      font: 14px $open-sans;
+      color: $bino-white-dark;
+      line-height: 1.714;
+      width: 600px;
+      margin: auto;
+    }
+
+    &_decoration {
+      margin-bottom: 45px;
+      display: inline-table;
+
+      &_line {
+        border-bottom: 1px solid $bino-white-dark;
+        width: 80px;
+        display: table-cell;
+        vertical-align: middle;
+        float: left;
+        height: 3px;
+
+        &:first-child
+        {
+          margin-right: 14px;
+        }
+
+        &:last-child
+        {
+          margin-left: 15px;
+        }
+      }
+
+      &_dot {
+        display: table-cell;
+        vertical-align: middle;
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        background: $bino-red;
+        float: left;
+      }
     }
 
   }
 }
 
-.clear
-{
+.clear {
   clear: both;
+}
+
+.button
+{
+  width: 225px;
+  height: 56px;
+  border-radius: 3px;
+  margin-top: 65px;
+  cursor: pointer;
+  border: 1px solid $bino-white-dark;
+  background-color: transparent;
+
+  &:hover
+  {
+    background-color: $bino-red;
+    transition: 0.3s;
+    border: none;
+  }
+
+  &__get_started
+  {
+    margin-right: 30px;
+  }
+
+  &__learn_more
+  {
+  }
+
+  &__red
+  {
+    border: none;
+    background-color: $bino-red;
+  }
+}
+
+.anchor
+{
+  margin-top: 155px;
+}
+
+.arrow
+{
+  content: '';
+  width: 45px;
+  height: 45px;
+  float: left;
+  margin-top: 45%;
+  cursor: pointer;
+
+  &__content
+  {
+    &_left
+    {
+      background: url("../images/bino/left-arrow.png") no-repeat;
+
+      &:hover
+      {
+        transform: rotate(180deg);
+      }
+    }
+
+    &_right
+    {
+      background: url("../images/bino/left-arrow.png") no-repeat;
+      transform: rotate(180deg);
+
+      &:hover
+      {
+        transform: rotate(0deg);
+      }
+    }
+
+    &:hover
+    {
+      background: url("../images/bino/right-arrow.png") no-repeat;
+    }
+  }
+}
+
+.features
+{
+  margin-top: 150px;
+  margin-bottom: 110px;
+
+  &__item
+  {
+    float: left;
+    width: 230px;
+    margin-left: 75px;
+    cursor: pointer;
+    &:hover
+    {
+      .features__item_title
+      {
+        color: $bino-red;
+      }
+
+      .features__item_image
+      {
+        transform: rotate(45deg);
+        border-color: $bino-red;
+        transition-duration: .3s;
+
+        &_icon
+        {
+          padding-top: 0;
+          transition: none;
+        }
+
+        &_clean_code
+        {
+          transform: rotate(-45deg);
+        }
+        &_creative_ideas
+        {
+          transform: rotate(-45deg);
+        }
+        &_free_support
+        {
+          transform: rotate(-45deg);
+        }
+        &_sleek_design
+        {
+          transform: rotate(-45deg);
+        }
+
+      }
+    }
+
+    &:first-child
+    {
+      margin-left: 0;
+    }
+
+    &_line
+    {
+      &:after
+      {
+        border-bottom: 0.5px solid $bino-grey-dark;
+        display: inline-block;
+        content: "";
+        width: 40px;
+        background-color: $bino-grey-dark;
+        margin: 15px 0 10px;
+      }
+    }
+
+    &_title
+    {
+      font: 18px $open-sans;
+      color: $bino-grey-dark;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    &_image
+    {
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+      border: 1px solid $bino-white-dark;
+      border-radius: 1px;
+
+      &_icon
+      {
+        width: 70px;
+        height: 70px;
+        padding-top: 1px;
+        transition: none;
+      }
+
+      &_clean_code
+      {
+        background: url("../images/bino/icon/clean-code.png") no-repeat center;
+      }
+      &_creative_ideas
+      {
+        background: url("../images/bino/icon/creative-ideas.png") no-repeat center;
+      }
+      &_free_support
+      {
+        background: url("../images/bino/icon/free-support.png") no-repeat center;
+      }
+      &_sleek_design
+      {
+        background: url("../images/bino/icon/sleek-design.png") no-repeat center;
+      }
+    }
+
+    &_text
+    {
+        font: 12px $source-sans;
+        color: $bino-grey;
+        line-height: 1.667;
+    }
+  }
+}
+
+.our_history
+{
+  margin-top: 140px;
+  margin-bottom: 145px;
+  display: inline-block;
+
+  &__image
+  {
+    float: left;
+    width: 506px;
+    height: 407px;
+    margin-right: 50px;
+  }
+  
+  &__text_block
+  {
+    float: left;
+    width: 585px;
+
+    &_text
+    {
+      font: 12px $source-sans;
+      color: $bino-grey;
+      line-height: 1.667;
+      text-align: left;
+      margin-bottom: 45px;
+    }
+
+    &_title
+    {
+      margin-bottom: 50px;
+      text-align: left;
+      color: $bino-grey-dark;
+      margin-top: 0;
+    }
+
+    &_button
+    {
+      float: left;
+      margin-top: 0;
+    }
+  }
+}
+
+.outline
+{
+  border-bottom: 1px solid $bino-white-dark;
+  width: 100%;
 }
