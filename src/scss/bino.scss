@@ -29,15 +29,14 @@ body
 
     &__menu
     {
-        padding: 30px 0;
+        padding: 20px 0;
         float: right;
     }
 }
 
 .title
 {
-    font: bold 36px $source-sans;
-    line-height: 1.2;
+    font: 700 36px/1.2 $source-sans;
 
     &__border_red
     {
@@ -48,7 +47,7 @@ body
 
 .text
 {
-    font: bold 14px/14px $open-sans;
+    font: 400 15.6px/1.2 $source-sans;
     color: $white;
 
     &__uppercase
@@ -59,23 +58,30 @@ body
     &__list
     {
         list-style-type: none;
-        display: flex;
 
         &_item
         {
-            margin-right: 30px;
+            margin-right: 59px;
             cursor: pointer;
-            padding-bottom: 23px;
+            float: left;
+
+            &:after
+            {
+                margin-bottom: 23px;
+                color: $bino-red;
+                border-bottom: 1px solid $bino-red;
+            }
 
             &:hover
             {
-                color: $bino-red;
-                border-bottom: 1px solid $bino-red;
-                padding-bottom: 22px;
+                //color: $bino-red;
+                //border-bottom: 1px solid $bino-red;
+                //padding-bottom: 22px;
             }
+
             &:last-child
             {
-                padding-right: 0;
+                margin-right: 0;
             }
         }
     }
@@ -102,23 +108,22 @@ body
 
         &_inscription
         {
-            font: 24px $source-sans;
+            font: 24px/1.2 $source-sans;
+            letter-spacing: 1.2px;
             color: $bino-white;
-            line-height: 1.2;
-
         }
         &_title
         {
-            font: bold 72px $open-sans;
+            font: 700 72px/1.2 $open-sans;
+            letter-spacing: 7.2px;
             color: $bino-white;
             margin: 50px 0 45px;
         }
 
         &_text
         {
-            font: 14px $open-sans;
+            font: 400 14px/1.714 $open-sans;
             color: $bino-white-dark;
-            line-height: 1.714;
             width: 600px;
             margin: auto;
         }
@@ -199,11 +204,17 @@ body
         border: none;
         background-color: $bino-red;
     }
+
+    &__text
+    {
+        font: 700 14px/14px $open-sans;
+        color: $white;
+    }
 }
 
 .anchor
 {
-    margin-top: 155px;
+    margin-top: 185px;
 }
 
 .arrow
@@ -293,10 +304,10 @@ body
 
         &_title
         {
-            font: 18px $open-sans;
+            font: 700 18px/1.2 $open-sans;
+            letter-spacing: 1.6px;
             color: $bino-grey-dark;
             text-transform: uppercase;
-            line-height: 1.2;
             margin-bottom: 0;
         }
 
@@ -338,9 +349,9 @@ body
 
         &_text
         {
-            font: 12px $source-sans;
+            font: 300 12px/1.667 $source-sans;
             color: $bino-grey;
-            line-height: 1.667;
+            letter-spacing: 0.6px;
         }
     }
 }
@@ -366,9 +377,9 @@ body
 
         &_text
         {
-            font: 12px $source-sans;
+            font: 400 14px/2.071 $source-sans;
+            letter-spacing: 0.2px;
             color: $bino-grey;
-            line-height: 1.667;
             text-align: left;
             margin-bottom: 45px;
         }
@@ -379,6 +390,7 @@ body
             text-align: left;
             color: $bino-grey-dark;
             margin-top: 0;
+            letter-spacing: 3.6px;
         }
 
         &_button
