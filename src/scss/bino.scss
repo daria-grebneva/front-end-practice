@@ -5,17 +5,6 @@ body
     margin: 0;
 }
 
-.container
-{
-    width: 1170px;
-    margin: 0 auto;
-
-    &__content
-    {
-        float: left;
-    }
-}
-
 .header
 {
 
@@ -139,38 +128,38 @@ body
 
         &_decoration
         {
+            margin: 0 auto;
+            position: relative;
             margin-bottom: 45px;
-            display: inline-table;
-
-            &_line
-            {
-                border-bottom: 1px solid $bino-white-dark;
-                width: 80px;
-                display: table-cell;
-                vertical-align: middle;
-                float: left;
-                height: 3px;
-
-                &:first-child
-                {
-                    margin-right: 14px;
-                }
-
-                &:last-child
-                {
-                    margin-left: 15px;
-                }
-            }
+            width: 200px;
 
             &_dot
             {
-                display: table-cell;
-                vertical-align: middle;
+                display: inline-block;
                 border-radius: 50%;
                 width: 7px;
                 height: 7px;
                 background: $bino-red;
-                float: left;
+
+                &:before,
+                &:after
+                {
+                    content: '';
+                    border-bottom: 1px solid $bino-white-dark;
+                    width: 80px;
+                    height: 3px;
+                    position: absolute;
+                }
+
+                &:before
+                {
+                    left: 0;
+                }
+
+                &:after
+                {
+                    right: 0;
+                }
             }
         }
 
@@ -185,12 +174,11 @@ body
 .button
 {
     width: 225px;
-    height: 56px;
+    padding: 20px 0;
     border-radius: 3px;
     margin-top: 65px;
     cursor: pointer;
     border: 1px solid $bino-white-dark;
-    background-color: transparent;
 
     &:hover
     {
@@ -208,7 +196,12 @@ body
     {
     }
 
-    &__red
+    &_transparent
+    {
+        background-color: transparent;
+    }
+
+    &_red
     {
         border: none;
         background-color: $bino-red;
@@ -236,15 +229,16 @@ body
     content: '';
     width: 45px;
     height: 45px;
-    float: left;
-    margin-top: 45%;
+    top: 40%;
     cursor: pointer;
+    position: absolute;
 
     &__content
     {
         &_left
         {
             background: url("../images/bino/left-arrow.png") no-repeat;
+            left: 10px;
 
             &:hover
             {
@@ -256,6 +250,7 @@ body
         {
             background: url("../images/bino/left-arrow.png") no-repeat;
             transform: rotate(180deg);
+            right: 10px;
 
             &:hover
             {
@@ -273,15 +268,13 @@ body
 .features
 {
     margin-top: 150px;
-    margin-bottom: 110px;
+    text-align: center;
 
     &__item
     {
-        float: left;
-        width: 230px;
-        margin-left: 75px;
         cursor: pointer;
         position: relative;
+        margin-bottom: 110px;
 
         &:hover
         {
@@ -298,23 +291,10 @@ body
             }
         }
 
-        &:first-child
-        {
-            margin-left: 0;
-        }
-
-        &_line
-        {
-            &:after
-            {
-                border-bottom: 0.5px solid $bino-grey-dark;
-                display: inline-block;
-                content: "";
-                width: 40px;
-                background-color: $bino-grey-dark;
-                margin: 15px 0 10px;
-            }
-        }
+        //&:first-child
+        //{
+        //    margin-left: 0;
+        //}
 
         &_title
         {
@@ -322,7 +302,24 @@ body
             letter-spacing: 1.6px;
             color: $bino-grey-dark;
             text-transform: uppercase;
-            margin-bottom: 0;
+            margin: 10px 0 30px;
+            position: relative;
+
+            &:after
+            {
+                border-bottom: 0.5px solid $bino-grey-dark;
+                display: inline-block;
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: $bino-grey-dark;
+                position: absolute;
+                top: 50px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
         }
 
         &_image
@@ -339,8 +336,10 @@ body
                 width: 70px;
                 height: 71px;
                 position: absolute;
-                left: 35%;
                 top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
             }
 
             &_clean_code
@@ -374,20 +373,20 @@ body
 {
     margin-top: 140px;
     margin-bottom: 145px;
-    display: inline-block;
+    //display: inline-block;
 
     &__image
     {
-        float: left;
+        //float: left;
         width: 506px;
         height: 407px;
-        margin-right: 50px;
+        //margin-right: 50px;
     }
 
     &__text_block
     {
-        float: left;
-        width: 585px;
+        //float: left;
+        //width: 585px;
 
         &_text
         {

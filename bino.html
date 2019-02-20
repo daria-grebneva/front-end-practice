@@ -4,13 +4,16 @@
     <meta charset="utf-8"/>
     <title>HTML5</title>
     <link href="src/css/bino.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:300,400,600,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
 <div class="top">
-    <div class="top__content_wrapper">
+    <div class="">
         <div class="arrow arrow__content arrow__content_left"></div>
-        <div class="container container__content">
+        <div class="container">
             <div class="header">
                 <img class="header__logo" src="src/images/bino/bino-logo.png">
                 <ul class="header__menu text text__uppercase text__list">
@@ -28,17 +31,19 @@
                 <div class="top__content_inscription">Our Clients Are Our First Priority</div>
                 <h1 class="top__content_title text__uppercase">welcome to bino</h1>
                 <div class="top__content_decoration">
-                    <div class="top__content_decoration_line"></div>
                     <div class="top__content_decoration_dot"></div>
-                    <div class="top__content_decoration_line"></div>
                 </div>
-                <h3 class="top__content_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                <h2 class="top__content_text">Lorem Ipsum is simply dummy text of the printing and typesetting
                     industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                     unknown
-                    printer took a galley of type and scrambled it to make a type specimen book.</h3>
+                    printer took a galley of type and scrambled it to make a type specimen book.</h2>
                 <div>
-                    <button class="button button__get_started button__text text__uppercase">get started now</button>
-                    <button class="button button__learn_more button__text text__uppercase">learn more</button>
+                    <button class="button button_transparent button__get_started button__text text__uppercase">get
+                        started now
+                    </button>
+                    <button class="button button_transparent button__learn_more button__text text__uppercase">learn
+                        more
+                    </button>
                 </div>
                 <div class="anchor">
                     <img src="src/images/bino/icon/anchor-icon.png">
@@ -48,56 +53,58 @@
         <div class="arrow arrow__content arrow__content_right"></div>
         <div class="clear"></div>
     </div>
-    <div class="container">
-        <div class="features">
-            <div class="features__item">
+</div>
+<div class="container">
+    <div class="features">
+        <div class="row">
+            <div class="features__item col-lg-3 col-md-6 col-sm-6 offset-md-0 offset-sm-0">
                 <div class="features__item_image"></div>
                 <div class="features__item_image_icon features__item_image_sleek_design"></div>
                 <h3 class="features__item_title">sleek design</h3>
-                <div class="features__item_line"></div>
                 <div class="features__item_text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the
                     industry.
                 </div>
             </div>
-            <div class="features__item">
+            <div class="features__item col-lg-3 col-md-6 col-sm-6 offset-md-0 offset-sm-0">
                 <div class="features__item_image"></div>
                 <div class="features__item_image_icon features__item_image_clean_code"></div>
                 <h3 class="features__item_title">clean code</h3>
-                <div class="features__item_line"></div>
                 <div class="features__item_text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the
                     industry.
                 </div>
             </div>
-            <div class="features__item">
+            <div class="features__item col-lg-3 col-md-6 col-sm-6 offset-md-0 offset-sm-0">
                 <div class="features__item_image"></div>
                 <div class="features__item_image_icon features__item_image_creative_ideas"></div>
                 <h3 class="features__item_title">creative ideas</h3>
-                <div class="features__item_line"></div>
                 <div class="features__item_text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the
                     industry.
                 </div>
             </div>
-            <div class="features__item">
+            <div class="features__item col-lg-3 col-md-6 col-sm-6 offset-md-0 offset-sm-0">
                 <div class="features__item_image"></div>
                 <div class="features__item_image_icon features__item_image_free_support"></div>
                 <h3 class="features__item_title">free support</h3>
-                <div class="features__item_line"></div>
                 <div class="features__item_text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the
                     industry.
                 </div>
             </div>
-            <div class="clear"></div>
         </div>
+        <div class="clear"></div>
     </div>
-    <div class="outline"></div>
-    <div class="container">
-        <div class="our_history">
-            <img class="our_history__image" src="src/images/bino/monitor.png">
-            <div class="our_history__text_block">
+</div>
+<div class="outline"></div>
+<div class="container">
+    <div class="our_history">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="our_history__image" src="src/images/bino/monitor.png">
+            </div>
+            <div class="our_history__text_block col-lg-6">
                 <h3 class="title title__border_red our_history__text_block_title text__uppercase">our history</h3>
                 <div class="our_history__text_block_text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
@@ -110,12 +117,13 @@
                     containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
                     PageMaker including versions of Lorem Ipsum.
                 </div>
-                <button class="button button__red button__shadow button__text text__uppercase our_history__text_block_button">browse our work</button>
+                <button class="button button_red button__shadow button__text text__uppercase our_history__text_block_button">
+                    browse our work
+                </button>
             </div>
         </div>
     </div>
-
-
 </div>
+
 </body>
 </html>
