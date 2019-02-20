@@ -61,22 +61,31 @@ body
 
         &_item
         {
+            transition: 0.3s;
             margin-right: 59px;
             cursor: pointer;
             float: left;
+            font-weight: 500;
+            //padding-bottom: 23px;
 
             &:after
             {
-                margin-bottom: 23px;
+                content: '';
+                display: inline-block;
                 color: $bino-red;
-                border-bottom: 1px solid $bino-red;
+                border-bottom: 1px solid transparent;
+                width: 100%;
+                transition: 0.3s;
             }
 
             &:hover
             {
-                //color: $bino-red;
-                //border-bottom: 1px solid $bino-red;
-                //padding-bottom: 22px;
+                color: $bino-red;
+
+                &:after
+                {
+                    border-bottom: 1px solid $bino-red;
+                }
             }
 
             &:last-child
@@ -203,6 +212,11 @@ body
     {
         border: none;
         background-color: $bino-red;
+    }
+
+    &__shadow
+    {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
     }
 
     &__text
