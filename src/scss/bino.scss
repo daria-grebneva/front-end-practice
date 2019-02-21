@@ -7,19 +7,15 @@ body
 
 .header
 {
-
     &__logo
     {
-        float: left;
         padding: 20px 0;
         width: 141px;
-        height: 52px;
     }
 
     &__menu
     {
-        padding: 20px 0;
-        float: right;
+        padding-top: 35px;
     }
 }
 
@@ -221,7 +217,10 @@ body
 
 .anchor
 {
-    margin-top: 185px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
 }
 
 .arrow
@@ -372,21 +371,28 @@ body
 .our_history
 {
     margin-top: 140px;
-    margin-bottom: 145px;
+    //margin-bottom: 145px;
     //display: inline-block;
 
     &__image
     {
+        width: 93%;
         //float: left;
-        width: 506px;
-        height: 407px;
+        //width: 506px;
+        //height: 407px;
         //margin-right: 50px;
+
+        &_block
+        {
+            margin-bottom: 145px;
+        }
     }
 
     &__text_block
     {
         //float: left;
         //width: 585px;
+        margin-bottom: 145px;
 
         &_text
         {
@@ -418,4 +424,25 @@ body
 {
     border-bottom: 1px solid $bino-white-dark;
     width: 100%;
+}
+
+@media screen and (max-width: 1200px)  {
+    .text__list_item
+    {
+        margin-right: 35px;
+    }
+}
+
+@media screen and (max-width: 991px)  {
+    .top__content
+    {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 767px)  {
+    .text__list_item
+    {
+        margin-right: 22px;
+    }
 }
