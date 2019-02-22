@@ -25,25 +25,79 @@ body
     }
 }
 
-.title
+.header-menu
 {
-    font: 700 36px/1.2 $source-sans;
+    list-style-type: none;
 
-    &__border_red
+    &__text
     {
-        &-left
+        font: 500 15.6px/1.2 $source-sans;
+        color: $white;
+        text-transform: uppercase;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    &__item
+    {
+        transition: 0.3s;
+        margin-right: 59px;
+        cursor: pointer;
+        float: left;
+
+        &:last-child
         {
-            border-left: 5px solid $bino-red;
-            padding-left: 30px;
+            margin-right: 0;
         }
 
-        &-right
+        &:after
         {
-            border-right: 5px solid $bino-red;
-            padding-right: 30px;
+            content: '';
+            display: inline-block;
+            color: $bino-red;
+            border-bottom: 1px solid transparent;
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        &:hover
+        {
+            color: $bino-red;
+            text-decoration: none;
+
+            .header-menu__text
+            {
+                color: $bino-red;
+                text-decoration: none;
+            }
+
+            &:after
+            {
+                border-bottom: 1px solid $bino-red;
+            }
         }
     }
 }
+
+.title
+{
+    font: 700 36px/1.2 $source-sans;
+}
+
+.border-red
+ {
+     &_left
+     {
+         border-left: 5px solid $bino-red;
+         padding-left: 30px;
+     }
+
+     &_right
+     {
+         border-right: 5px solid $bino-red;
+         padding-right: 30px;
+     }
+ }
 
 .text
 {
@@ -53,46 +107,6 @@ body
     &__uppercase
     {
         text-transform: uppercase;
-    }
-
-    &__list
-    {
-        list-style-type: none;
-
-        &_item
-        {
-            transition: 0.3s;
-            margin-right: 59px;
-            cursor: pointer;
-            float: left;
-            font-weight: 500;
-            //padding-bottom: 23px;
-
-            &:after
-            {
-                content: '';
-                display: inline-block;
-                color: $bino-red;
-                border-bottom: 1px solid transparent;
-                width: 100%;
-                transition: 0.3s;
-            }
-
-            &:hover
-            {
-                color: $bino-red;
-
-                &:after
-                {
-                    border-bottom: 1px solid $bino-red;
-                }
-            }
-
-            &:last-child
-            {
-                margin-right: 0;
-            }
-        }
     }
 }
 
@@ -104,76 +118,64 @@ body
     height: 990px;
     position: relative;
     text-align: center;
+}
 
-    &__content
+.top-content
+{
+    text-align: center;
+    margin-top: 195px;
+
+    &__inscription
     {
-        text-align: center;
-        margin-top: 195px;
+        font: 24px/1.2 $source-sans;
+        letter-spacing: 1.2px;
+        color: $bino-white;
+    }
+    &__title
+    {
+        font: 700 72px/1.2 $open-sans;
+        letter-spacing: 7.2px;
+        color: $bino-white;
+        margin: 50px 0 45px;
+        text-transform: uppercase;
+    }
 
-        &_wrapper
-        {
-            display: inline-block;
-        }
+    &__text
+    {
+        font: 400 14px/1.714 $open-sans;
+        color: $bino-white-dark;
+        width: 600px;
+        margin: auto;
+    }
+}
 
-        &_inscription
-        {
-            font: 24px/1.2 $source-sans;
-            letter-spacing: 1.2px;
-            color: $bino-white;
-        }
-        &_title
-        {
-            font: 700 72px/1.2 $open-sans;
-            letter-spacing: 7.2px;
-            color: $bino-white;
-            margin: 50px 0 45px;
-        }
+.decoration
+{
+    display: inline-block;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background: $bino-red;
+    position: relative;
 
-        &_text
-        {
-            font: 400 14px/1.714 $open-sans;
-            color: $bino-white-dark;
-            width: 600px;
-            margin: auto;
-        }
+    &:before,
+    &:after
+    {
+        content: '';
+        border-bottom: 1px solid $bino-white-dark;
+        width: 80px;
+        height: 3px;
+        position: absolute;
+    }
 
-        &_decoration
-        {
-            margin: 0 auto;
-            position: relative;
-            margin-bottom: 45px;
-            width: 200px;
+    &:before
+    {
+        left: 22px;
+    }
 
-            &_dot
-            {
-                display: inline-block;
-                border-radius: 50%;
-                width: 7px;
-                height: 7px;
-                background: $bino-red;
-
-                &:before,
-                &:after
-                {
-                    content: '';
-                    border-bottom: 1px solid $bino-white-dark;
-                    width: 80px;
-                    height: 3px;
-                    position: absolute;
-                }
-
-                &:before
-                {
-                    left: 0;
-                }
-
-                &:after
-                {
-                    right: 0;
-                }
-            }
-        }
-
+    &:after
+    {
+        right: 21px;
     }
 }
 
@@ -190,6 +192,9 @@ body
     margin-top: 65px;
     cursor: pointer;
     border: 1px solid $bino-white-dark;
+    font: 700 14px/14px $open-sans;
+    color: $white;
+    text-transform: uppercase;
 
     &:hover
     {
@@ -198,13 +203,9 @@ body
         border: none;
     }
 
-    &__get_started
+    &_offset-right
     {
         margin-right: 30px;
-    }
-
-    &__learn_more
-    {
     }
 
     &_transparent
@@ -218,15 +219,9 @@ body
         background-color: $bino-red;
     }
 
-    &__shadow
+    &_shadow
     {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-    }
-
-    &__text
-    {
-        font: 700 14px/14px $open-sans;
-        color: $white;
     }
 }
 
@@ -247,35 +242,32 @@ body
     cursor: pointer;
     position: absolute;
 
-    &__content
+    &_left
     {
-        &_left
-        {
-            background: url("../images/bino/left-arrow.png") no-repeat;
-            left: 10px;
-
-            &:hover
-            {
-                transform: rotate(180deg);
-            }
-        }
-
-        &_right
-        {
-            background: url("../images/bino/left-arrow.png") no-repeat;
-            transform: rotate(180deg);
-            right: 10px;
-
-            &:hover
-            {
-                transform: rotate(0deg);
-            }
-        }
+        background: url("../images/bino/left-arrow.png") no-repeat;
+        left: 10px;
 
         &:hover
         {
-            background: url("../images/bino/right-arrow.png") no-repeat;
+            transform: rotate(180deg);
         }
+    }
+
+    &_right
+    {
+        background: url("../images/bino/left-arrow.png") no-repeat;
+        transform: rotate(180deg);
+        right: 10px;
+
+        &:hover
+        {
+            transform: rotate(0deg);
+        }
+    }
+
+    &:hover
+    {
+        background: url("../images/bino/right-arrow.png") no-repeat;
     }
 }
 
@@ -283,155 +275,141 @@ body
 {
     margin-top: 150px;
     text-align: center;
+}
 
-    &__item
+.feature-item
+{
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 110px;
+
+    &:hover
     {
-        cursor: pointer;
-        position: relative;
-        margin-bottom: 110px;
-
-        &:hover
+        .feature-item__title
         {
-            .features__item_title
-            {
-                color: $bino-red;
-            }
-
-            .features__item_image
-            {
-                transform: rotate(45deg);
-                border-color: $bino-red;
-                transition-duration: .3s;
-            }
+            color: $bino-red;
         }
 
-        //&:first-child
-        //{
-        //    margin-left: 0;
-        //}
-
-        &_title
+        .feature-item__image
         {
-            font: 700 18px/1.2 $open-sans;
-            letter-spacing: 1.6px;
-            color: $bino-grey-dark;
-            text-transform: uppercase;
-            margin: 10px 0 30px;
-            position: relative;
-
-            &:after
-            {
-                border-bottom: 0.5px solid $bino-grey-dark;
-                display: inline-block;
-                content: "";
-                width: 40px;
-                height: 1px;
-                background-color: $bino-grey-dark;
-                position: absolute;
-                top: 50px;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
-        }
-
-        &_image
-        {
-            width: 70px;
-            height: 70px;
-            display: inline-block;
-            border: 1px solid $bino-white-dark;
-            border-radius: 1px;
+            transform: rotate(45deg);
+            border-color: $bino-red;
             transition-duration: .3s;
-
-            &_icon
-            {
-                width: 70px;
-                height: 71px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
-
-            &_clean_code
-            {
-                background: url("../images/bino/icon/clean-code.png") no-repeat center;
-            }
-            &_creative_ideas
-            {
-                background: url("../images/bino/icon/creative-ideas.png") no-repeat center;
-            }
-            &_free_support
-            {
-                background: url("../images/bino/icon/free-support.png") no-repeat center;
-            }
-            &_sleek_design
-            {
-                background: url("../images/bino/icon/sleek-design.png") no-repeat center;
-            }
         }
+    }
 
-        &_text
+    &__title
+    {
+        font: 700 18px/1.2 $open-sans;
+        letter-spacing: 1.6px;
+        color: $bino-grey-dark;
+        text-transform: uppercase;
+        margin: 10px 0 30px;
+        position: relative;
+
+        &:after
         {
-            font: 300 12px/1.667 $source-sans;
-            color: $bino-grey;
-            letter-spacing: 0.6px;
+            border-bottom: 0.5px solid $bino-grey-dark;
+            display: inline-block;
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: $bino-grey-dark;
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
+    }
+
+    &__image
+    {
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        border: 1px solid $bino-white-dark;
+        border-radius: 1px;
+        transition-duration: .3s;
+    }
+
+
+    &__icon
+    {
+        width: 70px;
+        height: 71px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        &_clean-code
+        {
+            background: url("../images/bino/icon/clean-code.png") no-repeat center;
+        }
+        &_creative-ideas
+        {
+            background: url("../images/bino/icon/creative-ideas.png") no-repeat center;
+        }
+        &_free-support
+        {
+            background: url("../images/bino/icon/free-support.png") no-repeat center;
+        }
+        &_sleek-design
+        {
+            background: url("../images/bino/icon/sleek-design.png") no-repeat center;
+        }
+    }
+
+    &__text
+    {
+        font: 300 12px/1.667 $source-sans;
+        color: $bino-grey;
+        letter-spacing: 0.6px;
     }
 }
 
-.our_history
+.our-history
 {
     margin-top: 140px;
-    //margin-bottom: 145px;
-    //display: inline-block;
 
     &__image
     {
         width: 93%;
-        //float: left;
-        //width: 506px;
-        //height: 407px;
-        //margin-right: 50px;
-
-        &_block
-        {
-            margin-bottom: 145px;
-        }
     }
 
-    &__text_block
+    &__text-block
     {
-        //float: left;
-        //width: 585px;
         margin-bottom: 145px;
 
-        &_text
-        {
-            font: 400 14px/2.071 $source-sans;
-            letter-spacing: 0.2px;
-            color: $bino-grey;
-            text-align: left;
-            margin-bottom: 45px;
-        }
 
-        &_title
-        {
-            margin-bottom: 50px;
-            text-align: left;
-            color: $bino-grey-dark;
-            margin-top: 0;
-            letter-spacing: 3.6px;
-        }
+    }
 
-        &_button
-        {
-            float: left;
-            margin-top: 0;
-        }
+    &__text
+     {
+         font: 400 14px/2.071 $source-sans;
+         letter-spacing: 0.2px;
+         color: $bino-grey;
+         text-align: left;
+         margin-bottom: 45px;
+     }
+
+    &__title
+    {
+        margin-bottom: 50px;
+        text-align: left;
+        color: $bino-grey-dark;
+        margin-top: 0;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+    }
+
+    &__button
+    {
+        float: left;
+        margin-top: 0;
     }
 }
 
@@ -486,8 +464,6 @@ body
                 top: 15px;
                 background: url("../images/bino/icon/photography.png") no-repeat;
             }
-
-
 
             &_title
             {
