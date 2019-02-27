@@ -15,13 +15,13 @@ body
 {
     &__logo
     {
-        padding: 20px 0;
+        padding: 40px 0;
         width: 141px;
     }
 
     &__menu
     {
-        padding-top: 35px;
+        padding-top: 52px;
     }
 }
 
@@ -89,14 +89,16 @@ body
 {
     &_left
     {
-        border-left: 5px solid $bino-red;
+        border-left: 6px solid $bino-red;
         padding-left: 30px;
+        line-height: 1;
     }
 
     &_right
     {
-        border-right: 5px solid $bino-red;
+        border-right: 6px solid $bino-red;
         padding-right: 30px;
+        line-height: 1;
     }
 }
 
@@ -124,7 +126,7 @@ body
 .top-content
 {
     text-align: center;
-    margin-top: 195px;
+    margin-top: 189px;
 
     &__inscription
     {
@@ -137,7 +139,7 @@ body
         font: 700 72px/1.2 $open-sans;
         letter-spacing: 7.2px;
         color: $bino-white;
-        margin: 50px 0 45px;
+        margin: 25px 0 1px 10px;
         text-transform: uppercase;
     }
 
@@ -147,6 +149,11 @@ body
         color: $bino-white-dark;
         width: 600px;
         margin: auto;
+    }
+
+    &__button-block
+    {
+        margin-top: 67px;
     }
 }
 
@@ -158,6 +165,7 @@ body
     height: 7px;
     background: $bino-red;
     position: relative;
+    margin: 32px 0;
 
     &:before,
     &:after
@@ -190,7 +198,6 @@ body
     width: 225px;
     padding: 20px 0;
     border-radius: 3px;
-    margin-top: 65px;
     cursor: pointer;
     border: 1px solid $bino-white-dark;
     font: 700 14px/14px $open-sans;
@@ -202,7 +209,7 @@ body
     {
         background-color: $bino-red;
         transition: 0.3s;
-        border: none;
+        border: 1px solid $bino-red;
     }
 
     &:focus
@@ -212,7 +219,7 @@ body
 
     &_offset-right
     {
-        margin-right: 30px;
+        margin-right: 27px;
     }
 
     &_transparent
@@ -222,7 +229,6 @@ body
 
     &_red
     {
-        border: none;
         background-color: $bino-red;
     }
 
@@ -237,7 +243,7 @@ body
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -30px;
+    bottom: -33px;
 }
 
 .arrow
@@ -245,14 +251,14 @@ body
     content: '';
     width: 45px;
     height: 45px;
-    top: 40%;
+    top: 44%;
     cursor: pointer;
     position: absolute;
 
     &_left
     {
         background: url("../images/bino/left-arrow.png") no-repeat;
-        left: 10px;
+        left: 41px;
 
         &:hover
         {
@@ -264,7 +270,7 @@ body
     {
         background: url("../images/bino/left-arrow.png") no-repeat;
         transform: rotate(180deg);
-        right: 10px;
+        right: 41px;
 
         &:hover
         {
@@ -280,7 +286,7 @@ body
 
 .features
 {
-    margin-top: 150px;
+    margin-top: 125px;
     text-align: center;
 }
 
@@ -305,13 +311,18 @@ body
         }
     }
 
+    &__text-block
+    {
+        margin-top: 23px;
+        padding: 0 15px 0 15px;
+    }
+
     &__title
     {
         font: 700 18px/1.2 $open-sans;
         letter-spacing: 1.6px;
         color: $bino-grey-dark;
         text-transform: uppercase;
-        margin: 10px 0 30px;
         position: relative;
 
         &:after
@@ -374,36 +385,37 @@ body
         font: 300 12px/1.667 $source-sans;
         color: $bino-grey;
         letter-spacing: 0.6px;
+        margin-top: 28px;
     }
 }
 
 .our-history
 {
-    margin-top: 140px;
+    margin-top: 123px;
 
     &__image
     {
-        width: 93%;
+        width: 506px;
     }
 
     &__text-block
     {
         margin-bottom: 145px;
-
+        padding-left: 0;
     }
 
     &__text
     {
-        font: 400 14px/2.071 $source-sans;
-        letter-spacing: 0.2px;
+        font: 400 14px/2.1 $source-sans;
+        letter-spacing: 0.17px;
         color: $bino-grey;
         text-align: left;
-        margin-bottom: 45px;
+        margin-bottom: 30px;
     }
 
     &__title
     {
-        margin-bottom: 50px;
+        margin-bottom: 41px;
         text-align: left;
         color: $bino-grey-dark;
         margin-top: 0;
@@ -413,7 +425,7 @@ body
     &__button
     {
         float: left;
-        margin-top: 0;
+        margin-top: 11px;
     }
 }
 
@@ -421,14 +433,21 @@ body
 {
     background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
     background-position: right;
-    background-size: 45% 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    background-size: 45.65% 100%;
+    padding-top: 152px;
+    padding-bottom: 140px;
+
+    &_offset
+    {
+        padding-right: 0;
+    }
 
     &__item
     {
         position: relative;
         text-align: right;
+        margin-top: 55px;
+        margin-bottom: 56px;
 
         .web-design:after
         {
@@ -481,7 +500,6 @@ body
         font: 400 14px/2.071 $source-sans;
         color: $bino-grey;
         text-align: right;
-        margin-bottom: 45px;
     }
 
     &__button
@@ -492,10 +510,8 @@ body
 
     &__title
     {
-        margin-bottom: 50px;
         text-align: right;
         color: $bino-white;
-        margin-top: 0;
         letter-spacing: 3.6px;
     }
 
