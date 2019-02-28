@@ -21,7 +21,7 @@ body
 
     &__menu
     {
-        padding-top: 52px;
+        //padding-top: 52px;
     }
 }
 
@@ -41,7 +41,8 @@ body
     &__item
     {
         transition: 0.3s;
-        margin-right: 59px;
+        //margin-right: 59px;
+        margin-right: 25px;
         cursor: pointer;
         float: left;
 
@@ -126,17 +127,20 @@ body
 .top-content
 {
     text-align: center;
-    margin-top: 189px;
+    //margin-top: 189px;
+    margin-top: 70px;
 
     &__inscription
     {
-        font: 24px/1.2 $source-sans;
+        font: 19px/1.2 $source-sans;
+        //font-size: 24px;
         letter-spacing: 1.2px;
         color: $bino-white;
     }
     &__title
     {
-        font: 700 72px/1.2 $open-sans;
+        font: 700 45px/1.2 $open-sans;
+        //font-size: 72px;
         letter-spacing: 7.2px;
         color: $bino-white;
         margin: 25px 0 1px 10px;
@@ -145,15 +149,17 @@ body
 
     &__text
     {
-        font: 400 14px/1.714 $open-sans;
+        font: 400 12px/1.714 $open-sans;
         color: $bino-white-dark;
-        width: 600px;
+        //width: 600px;
+        //font-size: 14px;
         margin: auto;
     }
 
     &__button-block
     {
-        margin-top: 67px;
+        //margin-top: 67px;
+        margin-top: 50px;
     }
 }
 
@@ -217,9 +223,9 @@ body
         outline: 1px transparent;
     }
 
-    &_offset-right
+    &_offset
     {
-        margin-right: 27px;
+        margin-bottom: 30px;
     }
 
     &_transparent
@@ -395,13 +401,15 @@ body
 
     &__image
     {
-        width: 506px;
+        //width: 506px;
+        max-width: 100%;
+        margin-bottom: 55px;
     }
 
     &__text-block
     {
         margin-bottom: 145px;
-        padding-left: 0;
+        //padding-left: 0;
     }
 
     &__text
@@ -431,57 +439,38 @@ body
 
 .our-services
 {
-    background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
-    background-position: right;
-    background-size: 45.65% 100%;
+    //background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
+    //background-position: right;
+    //background-size: 45.65% 100%;
+    background-color: $bino-black;
     padding-top: 152px;
-    padding-bottom: 140px;
+    padding-bottom: 86px;
 
     &_offset
     {
-        padding-right: 0;
+        //padding-right: 0;
     }
 
     &__item
     {
         position: relative;
         text-align: right;
-        margin-top: 55px;
-        margin-bottom: 56px;
+        //margin-top: 60px;
+        margin-bottom: 60px;
+        margin-top: 140px;
 
         .web-design:after
         {
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            right: -140px;
-            top: 15px;
             background: url("../images/bino/icon/web-design.png") no-repeat;
         }
 
         .print-design:after
         {
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            right: -140px;
-            top: 15px;
             background: url("../images/bino/icon/print-design.png") no-repeat;
         }
 
         .photography:after
         {
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            right: -140px;
-            top: 15px;
             background: url("../images/bino/icon/photography.png") no-repeat;
         }
 
@@ -493,6 +482,19 @@ body
         color: $bino-red;
         text-align: right;
         text-transform: uppercase;
+
+        &:after
+        {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            //right: -122px;
+            //top: 15px;
+            right: 0;
+            top: -90px;
+        }
     }
 
     &__item-text
@@ -531,26 +533,36 @@ body
     }
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (min-width: 532px)
 {
+    .button_offset
+    {
+        margin-right: 27px;
+        margin-bottom: 0;
+    }
+
     .header-menu__item
     {
         margin-right: 35px;
     }
 }
 
-@media screen and (max-width: 991px)
+@media screen and (min-width: 451px)
 {
-    .top__content
+    .top-content
     {
-        margin-top: 80px;
-    }
-}
+        &__inscription
+        {
+            font-size: 25px;
+        }
+        &__title
+        {
+            font-size: 60px;
+        }
 
-@media screen and (max-width: 767px)
-{
-    .header-menu__item
-    {
-        margin-right: 22px;
+        &__text
+        {
+            font-size: 14px;
+        }
     }
 }
