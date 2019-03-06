@@ -71,27 +71,37 @@ body
     }
 }
 
+.carousel
+{
+    max-width: 90%;
+    margin: auto;
+}
+
 .title
 {
     font: 700 36px/1.2 $source-sans;
     text-transform: uppercase;
-}
 
-.border-red
-{
-    &_left
+    &_border-left:before
     {
-        border-left: 6px solid $bino-red;
-        padding-left: 30px;
-        line-height: 1;
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 36px;
+        margin-right: 30px;
+        background-color: $bino-red;
     }
 
-    &_right
+    &_border-right:after
     {
-        border-right: 6px solid $bino-red;
-        padding-right: 30px;
-        line-height: 1;
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 36px;
+        margin-left: 30px;
+        background-color: $bino-red;
     }
+
 }
 
 .text
@@ -257,7 +267,7 @@ body
     &_left
     {
         background: url("../images/bino/left-arrow.png") no-repeat;
-        left: 41px;
+        left: 10px;
 
         &:hover
         {
@@ -269,7 +279,7 @@ body
     {
         background: url("../images/bino/left-arrow.png") no-repeat;
         transform: rotate(180deg);
-        right: 41px;
+        right: 10px;
 
         &:hover
         {
@@ -293,7 +303,7 @@ body
 {
     cursor: pointer;
     position: relative;
-    margin-bottom: 110px;
+    margin-bottom: 94px;
 
     &:hover
     {
@@ -390,7 +400,7 @@ body
 
 .our-history
 {
-    margin-top: 123px;
+    margin-top: 140px;
 
     &__image
     {
@@ -400,7 +410,7 @@ body
 
     &__text-block
     {
-        margin-bottom: 145px;
+        margin-bottom: 147px;
     }
 
     &__text
@@ -414,7 +424,7 @@ body
 
     &__title
     {
-        margin-bottom: 41px;
+        margin-bottom: 31px;
         text-align: left;
         color: $bino-grey-dark;
         margin-top: 0;
@@ -434,36 +444,27 @@ body
     padding-top: 152px;
     padding-bottom: 86px;
 
+    .web-design:after
+    {
+        background: url("../images/bino/icon/web-design.png") no-repeat;
+    }
+
+    .print-design:after
+    {
+        background: url("../images/bino/icon/print-design.png") no-repeat;
+    }
+
+    .photography:after
+    {
+        background: url("../images/bino/icon/photography.png") no-repeat;
+    }
+
     &__item
     {
         position: relative;
-        text-align: right;
         margin-bottom: 60px;
         margin-top: 140px;
-
-        .web-design:after
-        {
-            background: url("../images/bino/icon/web-design.png") no-repeat;
-        }
-
-        .print-design:after
-        {
-            background: url("../images/bino/icon/print-design.png") no-repeat;
-        }
-
-        .photography:after
-        {
-            background: url("../images/bino/icon/photography.png") no-repeat;
-        }
-
-    }
-
-    &__item-title
-    {
-        font: 18px/1.611 $open-sans;
-        color: $bino-red;
-        text-align: right;
-        text-transform: uppercase;
+        text-align: center;
 
         &:after
         {
@@ -472,16 +473,24 @@ body
             display: inline-block;
             width: 80px;
             height: 80px;
-            right: 0;
             top: -90px;
+            right: 0;
+            left: 0;
+            margin: auto;
         }
+    }
+
+    &__item-title
+    {
+        font: 18px/1.611 $open-sans;
+        color: $bino-red;
+        text-transform: uppercase;
     }
 
     &__item-text
     {
         font: 400 14px/2.071 $source-sans;
         color: $bino-grey;
-        text-align: right;
     }
 
     &__button
@@ -492,7 +501,7 @@ body
 
     &__title
     {
-        text-align: right;
+        text-align: center;
         color: $bino-white;
         letter-spacing: 3.6px;
     }
@@ -504,6 +513,7 @@ body
     border-bottom: 1px solid $bino-white-dark;
     width: 100%;
 }
+
 @media screen and (min-width: 451px)
 {
     .top-content
@@ -524,14 +534,8 @@ body
     }
 }
 
-
 @media screen and (min-width: 532px)
 {
-    .button_offset
-    {
-        margin-right: 27px;
-        margin-bottom: 0;
-    }
 
     .header-menu__item
     {
@@ -539,8 +543,27 @@ body
     }
 }
 
+@media screen and (min-width: 586px)
+{
+    .button_offset
+    {
+        margin-right: 27px;
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (min-width: 768px)
 {
+    .arrow_left
+    {
+        left: 41px;
+    }
+
+    .arrow_right
+    {
+        right: 41px;
+    }
+
     .our-services__item-title:after
     {
         right: -115px;
@@ -550,6 +573,25 @@ body
     .top-content
     {
         margin-top: 130px;
+    }
+
+    .our-services
+    {
+        &__title
+        {
+            text-align: right;
+        }
+
+        &__item
+        {
+            text-align: right;
+        }
+
+        &__item:after
+        {
+            right: 0;
+            left: auto;
+        }
     }
 }
 
@@ -593,21 +635,21 @@ body
 
     .our-services
     {
-        &__offset
+        &__container
         {
-            padding-right: 0;
-            margin: auto;
+            width: 54.35%;
+        }
+
+        &__item:after
+        {
+            right: -122px;
+            top: 15px;
         }
 
         &__item
         {
             margin-top: 60px;
-        }
-
-        &__item-title:after
-        {
-            right: -122px;
-            top: 15px;
+            text-align: right;
         }
     }
 
@@ -643,11 +685,6 @@ body
         background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
         background-position: right;
         background-size: 45.65% 100%;
-
-        &_offset
-        {
-            margin: unset;
-        }
     }
 }
 
