@@ -11,6 +11,14 @@ body
     margin: 0;
 }
 
+.container-wrapper
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .header__logo
 {
     padding: 40px 0;
@@ -81,6 +89,17 @@ body
 {
     font: 700 36px/1.2 $source-sans;
     text-transform: uppercase;
+    letter-spacing: 3.6px;
+
+    &_dark
+    {
+        color: $bino-grey-dark;
+    }
+
+    &_white
+    {
+        color: $bino-white;
+    }
 
     &_border-left:before
     {
@@ -426,9 +445,7 @@ body
     {
         margin-bottom: 31px;
         text-align: left;
-        color: $bino-grey-dark;
         margin-top: 0;
-        letter-spacing: 3.6px;
     }
 
     &__button
@@ -502,10 +519,60 @@ body
     &__title
     {
         text-align: center;
-        color: $bino-white;
-        letter-spacing: 3.6px;
     }
 
+}
+
+.recent-works
+{
+    padding-top: 130px;
+
+    &__text
+    {
+        font: 400 15px/2.2 $source-sans;
+        letter-spacing: 0.5px;
+        color: $bino-grey;
+        margin-bottom: -10px;
+    }
+
+    &__images
+    {
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__image
+    {
+        width: 100%;
+    }
+}
+
+.works-list
+{
+    list-style-type: none;
+    display: inline-block;
+
+    &__item
+    {
+        float: none;
+        margin-bottom: 5px;
+
+        &-link
+        {
+            transition: 0.3s;
+            color: $bino-grey-dark;
+            text-decoration: none;
+            font: 400 14px $open-sans;
+            text-transform: uppercase;
+
+            &:hover
+            {
+                text-decoration: none;
+                color: $bino-red;
+            }
+        }
+    }
 }
 
 .outline
@@ -536,10 +603,53 @@ body
 
 @media screen and (min-width: 532px)
 {
-
     .header-menu__item
     {
         margin-right: 35px;
+    }
+
+    .works-list
+    {
+        &__item
+        {
+            float: left;
+            margin-bottom: 0;
+
+            &:last-child
+            {
+                margin: 17px 0;
+
+                &:after
+                {
+                    content: none;
+                }
+            }
+
+            &:after
+            {
+                content: '/';
+                display: inline-block;
+                margin: 20px 14.3px;
+                font: 400 14px "Open Sans", sans-serif;
+                color: $bino-red;
+            }
+        }
+    }
+
+    .works-list
+    {
+        &__item
+        {
+            &:last-child
+            {
+                margin: 17px 0;
+            }
+
+            &:after
+            {
+                margin: 20px 14.3px;
+            }
+        }
     }
 }
 
@@ -648,8 +758,24 @@ body
 
         &__item
         {
-            margin-top: 60px;
+            margin-top: 24px;
             text-align: right;
+        }
+    }
+
+    .works-list
+    {
+        &__item
+        {
+            &:last-child
+            {
+                margin: 20px 0;
+            }
+
+            &:after
+            {
+                margin: 24px 18.3px;
+            }
         }
     }
 
