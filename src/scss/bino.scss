@@ -748,6 +748,7 @@ body
         &__container
         {
             width: 54.35%;
+            padding: 60px;
         }
 
         &__item:after
@@ -783,6 +784,13 @@ body
 
 @media screen and (min-width: 1200px)
 {
+    .our-services
+    {
+        background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
+        background-position: right;
+        background-size: 45.65% 100%;
+    }
+
     .container
     {
         max-width: 1200px;
@@ -806,12 +814,7 @@ body
 
 @media screen and (min-width: 1500px)
 {
-    .our-services
-    {
-        background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
-        background-position: right;
-        background-size: 45.65% 100%;
-    }
+
 }
 
 
