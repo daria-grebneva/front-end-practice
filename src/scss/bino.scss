@@ -101,7 +101,8 @@ body
         color: $bino-white;
     }
 
-    &_border-left
+    &_border-left,
+    &_border-right
     {
         padding-left: 35px;
         position: relative;
@@ -117,25 +118,6 @@ body
             position: absolute;
             left: 0;
             top: 4px;
-        }
-    }
-
-    &_border-right
-    {
-        padding-right: 32px;
-        position: relative;
-        margin-top: -7px;
-
-        &:after
-        {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 36px;
-            background-color: $bino-red;
-            position: absolute;
-            right: 0;
-            top: 5px;
         }
     }
 }
@@ -476,8 +458,6 @@ body
     background-color: $bino-black;
     padding-top: 95px;
     padding-bottom: 0;
-    //padding-top: 152px;
-    //padding-bottom: 24px;
 
     .web-design:after
     {
@@ -498,7 +478,6 @@ body
     {
         position: relative;
         margin-bottom: 55px;
-        text-align: center;
         margin-top: 130px;
 
         &:after
@@ -509,7 +488,6 @@ body
             width: 80px;
             height: 80px;
             top: -90px;
-            right: 0;
             left: 0;
             margin: auto;
         }
@@ -538,8 +516,6 @@ body
 
     &__title
     {
-        text-align: center;
-
         &:after
         {
             right: 100px;
@@ -707,6 +683,30 @@ body
 
 @media screen and (min-width: 992px)
 {
+    .title_border-right
+    {
+        padding-right: 32px;
+        position: relative;
+        margin-top: -7px;
+        
+        &:before
+        {
+            content: none;
+        }
+
+        &:after
+        {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 36px;
+            background-color: $bino-red;
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+    }
+
     .header__menu
     {
         padding-top: 52px;
