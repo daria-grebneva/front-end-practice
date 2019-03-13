@@ -281,6 +281,7 @@ body
     top: 44%;
     cursor: pointer;
     position: absolute;
+    z-index: 10;
 
     &_left
     {
@@ -547,6 +548,11 @@ body
     {
         width: 100%;
     }
+
+    &-images
+    {
+        margin-top: 4px;
+    }
 }
 
 .works-list
@@ -573,6 +579,76 @@ body
                 color: $bino-red;
             }
         }
+    }
+}
+
+.case-study
+{
+    background-color: $background-white-blue;
+
+    &__offset
+    {
+        padding-top: 140px;
+        padding-bottom: 28px;
+    }
+
+    &__slider
+    {
+        display: inline-block;
+        text-align: center;
+        background-color: $white;
+        padding: 80px 60px 115px 60px;
+        max-width: 665px;
+    }
+
+    &__icon
+    {
+        margin-bottom: 51px;
+    }
+
+    &__title
+    {
+        font: 700 18px/1.2 $open-sans;
+        letter-spacing: 1.6px;
+        color: $bino-grey-dark;
+        text-transform: uppercase;
+        position: relative;
+
+        &:after
+        {
+            border-bottom: 0.5px solid $bino-grey-dark;
+            display: inline-block;
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: $bino-grey-dark;
+            position: absolute;
+            top: 75px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    &__text
+    {
+        font: 400 14px/2.1 $source-sans;
+        letter-spacing: 1.17px;
+        color: $bino-grey;
+        margin-bottom: 22px;
+        margin-top: 50px;
+    }
+
+    &__button
+    {
+        width: 145px;
+        padding: 15px 0;
+    }
+
+    &__background
+    {
+        //background: url("../images/bino/case-study-background.png") no-repeat;
     }
 }
 
@@ -660,6 +736,19 @@ body
     {
         margin-right: 27px;
         margin-bottom: 0;
+    }
+
+    .our-services__item
+    {
+        margin-bottom: 100px;
+        margin-top: 60px;
+        padding-left: 115px;
+
+        &:after
+        {
+            top: 8px;
+            left: 0;
+        }
     }
 }
 
@@ -773,6 +862,8 @@ body
         {
             text-align: right;
             margin-top: 0;
+            padding-left: 0;
+            margin-bottom: 55px;
         }
 
         &__title
@@ -804,16 +895,28 @@ body
         }
     }
 
+    .case-study
+    {
+        position: relative;
+        &__slider
+        {
+            position: absolute;
+            z-index: 10;
+            bottom: 48px;
+        }
+
+        &__background
+        {
+            margin-bottom: 150px;
+        }
+    }
+
 }
 
 @media screen and (min-width: 1200px)
 {
     .our-services
     {
-        //background: $bino-black url("../images/bino/our-service-background.png") no-repeat;
-        //background-position: right;
-        //background-size: 45.65% 100%;
-
         padding-top: 152px;
         padding-bottom: 24px;
 
@@ -844,12 +947,6 @@ body
         margin-top: 189px;
     }
 }
-
-@media screen and (min-width: 1500px)
-{
-
-}
-
 
 
 
