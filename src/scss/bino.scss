@@ -551,7 +551,10 @@ body
 
     &-images
     {
-        margin-top: 4px;
+        &:first-child
+        {
+            margin-top: 8px;
+        }
     }
 }
 
@@ -585,6 +588,7 @@ body
 .case-study
 {
     background-color: $background-white-blue;
+    padding-bottom: 150px;
 
     &__offset
     {
@@ -633,10 +637,10 @@ body
 
     &__text
     {
-        font: 400 14px/2.1 $source-sans;
-        letter-spacing: 1.17px;
+        font: 300 14px/24px $source-sans;
+        letter-spacing: 1px;
         color: $bino-grey;
-        margin-bottom: 22px;
+        margin-bottom: 42px;
         margin-top: 50px;
     }
 
@@ -645,10 +649,20 @@ body
         width: 145px;
         padding: 15px 0;
     }
+}
 
-    &__background
+.carousel.carousel-fade
+{
+    .carousel-item
     {
-        //background: url("../images/bino/case-study-background.png") no-repeat;
+        display: block;
+        opacity: 0;
+        transition: opacity ease-out .7s;
+
+        &.active
+        {
+            opacity: 1 !important;
+        }
     }
 }
 
@@ -902,12 +916,13 @@ body
         {
             position: absolute;
             z-index: 10;
-            bottom: 48px;
+            bottom: 198px;
         }
 
         &__background
         {
-            margin-bottom: 150px;
+            padding-left: 0;
+            margin-left: 39%;
         }
     }
 
@@ -945,6 +960,14 @@ body
     .top-content
     {
         margin-top: 189px;
+    }
+
+    .case-study
+    {
+        &__background
+        {
+            margin-left: 50%;
+        }
     }
 }
 
