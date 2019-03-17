@@ -223,6 +223,8 @@ body
     color: $white;
     text-transform: uppercase;
     transition: 0.3s;
+    text-align: center;
+    display: inline-block;
 
     &:hover
     {
