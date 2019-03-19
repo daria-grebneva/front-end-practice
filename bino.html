@@ -15,7 +15,7 @@
 <body>
     <div class="top">
         <a class="arrow arrow_left" href="#demo" data-slide="prev" title="prev"></a>
-        <div class="container">
+        <div class="container d-none d-md-block">
             <div class="row">
                 <div class="col-lg-2 col-md-12">
                     <img class="header__logo float-lg-left" src="src/images/bino/bino-logo.png" alt="logo"/>
@@ -33,8 +33,43 @@
                 </div>
             </div>
         </div>
+        <div class="navbar-mobile">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-bino d-lg-none d-md-none">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img class="float-lg-left" src="src/images/bino/bino-logo.png" alt="logo"/>
+                </a>
+                <div class="collapse navbar-collapse header__menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto header-menu">
+                        <li class="nav-item active header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">home</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">about us</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">portfolio</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">pricing</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">team</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">blog</a>
+                        </li>
+                        <li class="nav-item header-menu__item">
+                            <a class="nav-link header-menu__text" href="#" title="menu">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <div class="top-content">
-            <div id="demo" class="carousel carousel-fade" data-ride="carousel">
+            <div id="demo" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="container">

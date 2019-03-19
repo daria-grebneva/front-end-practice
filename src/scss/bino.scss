@@ -81,8 +81,32 @@ body
 
 .carousel
 {
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
+}
+
+.navbar
+{
+    &-toggler
+    {
+        outline: none;
+    }
+
+    &-mobile
+    {
+        position: absolute;
+        top: -70px;
+        width: 100%;
+        z-index: 15;
+    }
+}
+
+.bg-bino
+{
+    //background: $bibo-bg;
+    background: url(../images/bino/background-top.png) center 0 no-repeat;
+    width: 100%;
+    background-size: cover;
 }
 
 .title
@@ -138,7 +162,7 @@ body
     background: url(../images/bino/background-top.png) center 0 no-repeat;
     width: 100%;
     background-size: cover;
-    height: 990px;
+    height: 860px;
     position: relative;
     text-align: center;
 }
@@ -147,6 +171,7 @@ body
 {
     text-align: center;
     margin-top: 70px;
+    padding-top: 130px;
 
     &__inscription
     {
@@ -178,13 +203,13 @@ body
 
 .decoration
 {
-    display: inline-block;
+    display: block;
     border-radius: 50%;
     width: 7px;
     height: 7px;
     background: $bino-red;
     position: relative;
-    margin: 32px 0;
+    margin: 32px auto;
 
     &:before,
     &:after
@@ -211,6 +236,7 @@ body
 {
     clear: both;
 }
+
 
 .button
 {
@@ -264,6 +290,18 @@ body
     &_shadow
     {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+}
+
+.button:not([href]):not([tabindex])
+{
+    color: $white;
+
+    &:hover,
+    &:focus
+    {
+        color: $white;
     }
 }
 
@@ -653,21 +691,6 @@ body
     }
 }
 
-.carousel.carousel-fade
-{
-    .carousel-item
-    {
-        display: block;
-        opacity: 0;
-        transition: opacity ease-out .7s;
-
-        &.active
-        {
-            opacity: 1 !important;
-        }
-    }
-}
-
 .outline
 {
     border-bottom: 1px solid $bino-white-dark;
@@ -783,6 +806,7 @@ body
     .top-content
     {
         margin-top: 130px;
+        padding-top: 0;
     }
 }
 
