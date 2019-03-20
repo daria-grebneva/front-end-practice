@@ -44,38 +44,6 @@ body
         margin-right: 25px;
         cursor: pointer;
         float: left;
-
-        &:last-child
-        {
-            margin-right: 0;
-        }
-
-        &:after
-        {
-            content: '';
-            display: inline-block;
-            color: $bino-red;
-            border-bottom: 1px solid transparent;
-            width: 100%;
-            transition: 0.5s;
-        }
-
-        &:hover
-        {
-            color: $bino-red;
-            text-decoration: none;
-
-            .header-menu__text
-            {
-                color: $bino-red;
-                text-decoration: none;
-            }
-
-            &:after
-            {
-                border-bottom: 1px solid $bino-red;
-            }
-        }
     }
 }
 
@@ -103,10 +71,10 @@ body
 
 .bg-bino
 {
-    //background: $bibo-bg;
-    background: url(../images/bino/background-top.png) center 0 no-repeat;
-    width: 100%;
-    background-size: cover;
+    background: $bibo-bg;
+    //background: url(../images/bino/background-top.png) center 0 no-repeat;
+    //width: 100%;
+    //background-size: cover;
 }
 
 .title
@@ -311,6 +279,7 @@ body
     left: 0;
     right: 0;
     bottom: -33px;
+    cursor: pointer;
 }
 
 .arrow
@@ -582,6 +551,7 @@ body
         float: left;
         padding: 0;
         margin: 0;
+        width: 50%;
     }
 
     &__image
@@ -803,10 +773,77 @@ body
         right: 41px;
     }
 
-    .top-content
+    .top
     {
-        margin-top: 130px;
-        padding-top: 0;
+        height: 990px;
+
+        &-content
+        {
+            margin-top: 130px;
+            padding-top: 0;
+        }
+    }
+    .header-menu
+    {
+        &__item
+        {
+            &:last-child
+            {
+                margin-right: 0;
+            }
+
+            &:after
+            {
+                content: '';
+                display: inline-block;
+                color: $bino-red;
+                border-bottom: 1px solid transparent;
+                width: 100%;
+                transition: 0.5s;
+            }
+
+            &:hover
+            {
+                color: $bino-red;
+                text-decoration: none;
+
+                .header-menu__text
+                {
+                    color: $bino-red;
+                    text-decoration: none;
+                }
+
+                &:after
+                {
+                    border-bottom: 1px solid $bino-red;
+                }
+            }
+        }
+    }
+
+    .case-study
+    {
+
+        position: relative;
+
+        &__slider
+        {
+            max-width: 465px;
+            position: absolute;
+            z-index: 15;
+            bottom: 205px;
+            padding: 40px 60px 65px 60px;
+        }
+
+        &__background
+        {
+            margin-left: 10%;
+
+            &-image
+            {
+                max-width: 565px;
+            }
+        }
     }
 }
 
@@ -937,18 +974,22 @@ body
 
     .case-study
     {
-        position: relative;
         &__slider
         {
-            position: absolute;
-            z-index: 10;
             bottom: 198px;
+            padding: 80px 60px 115px 60px;
+            max-width: 665px;
         }
 
         &__background
         {
             padding-left: 0;
             margin-left: 39%;
+
+            &-image
+            {
+                max-width: unset;
+            }
         }
     }
 
