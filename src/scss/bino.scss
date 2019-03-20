@@ -572,6 +572,7 @@ body
 {
     list-style-type: none;
     display: inline-block;
+    margin-top: 7px;
 
     &__item
     {
@@ -583,7 +584,7 @@ body
             transition: 0.3s;
             color: $bino-grey-dark;
             text-decoration: none;
-            font: 400 14px $open-sans;
+            font: 400 13px $open-sans;
             text-transform: uppercase;
 
             &:hover
@@ -603,7 +604,7 @@ body
     &__offset
     {
         padding-top: 140px;
-        padding-bottom: 28px;
+        padding-bottom: 32px;
     }
 
     &__slider
@@ -665,6 +666,89 @@ body
 {
     border-bottom: 1px solid $bino-white-dark;
     width: 100%;
+}
+
+.statistic
+{
+    background: $bibo-bg;
+    padding-top: 142px;
+    padding-bottom: 132px;
+
+    &__wrapper
+    {
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    &__item
+    {
+        position: relative;
+        color: $bino-white;
+        text-align: center;
+        margin-right: 51px;
+        float: left;
+        margin-bottom: 170px;
+
+        &:last-child
+        {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        &-numbers
+        {
+            font: 700 33px/2px $source-sans;
+            line-height: 30px;
+            display: block;
+            margin-top: 30px;
+        }
+
+
+
+        &-text
+        {
+            font: 400 21px/1px $source-sans;
+            line-height: 37px;
+        }
+
+        &:after
+        {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 111px;
+            height: 111px;
+            top: -125px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        &-favourites:after
+        {
+            background: url("../images/bino/icon/user-favourites.png") no-repeat;
+        }
+
+        &-posts-last:after
+        {
+            background: url("../images/bino/icon/posts-last.png") no-repeat;
+        }
+
+        &-total-posts:after
+        {
+            background: url("../images/bino/icon/total-posts.png") no-repeat;
+        }
+
+        &-campaigns:after
+        {
+            background: url("../images/bino/icon/campaigns.png") no-repeat;
+        }
+
+        &-features:after
+        {
+            background: url("../images/bino/icon/amazing-features.png") no-repeat;
+        }
+    }
 }
 
 @media screen and (min-width: 451px)
@@ -734,6 +818,35 @@ body
             &:after
             {
                 margin: 20px 14.3px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px)
+{
+    .statistic
+    {
+        background: url("../images/bino/statistic-background.png") no-repeat;
+        padding-top: 90px;
+
+        &__item
+        {
+            margin-bottom: 145px;
+
+            &:last-child
+            {
+                margin-bottom: 145px;
+            }
+
+            &-text
+            {
+                line-height: 0;
+            }
+
+            &-numbers
+            {
+                margin-top: 0;
             }
         }
     }
@@ -845,6 +958,34 @@ body
             }
         }
     }
+
+    .statistic
+    {
+        padding-top: 152px;
+
+        &__wrapper
+        {
+            margin-top: 130px;
+        }
+
+        &__item
+        {
+            margin-right: 30px;
+            margin-bottom: 0;
+
+            &-text
+            {
+                line-height: 20px;
+                display: block;
+                margin-top: 10px;
+            }
+
+            &-numbers
+            {
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 992px)
@@ -893,6 +1034,7 @@ body
         {
             width: 600px;
             font-size: 14px;
+            padding-top: 6px;
         }
 
         &__button-block
@@ -993,6 +1135,10 @@ body
         }
     }
 
+    .statistic__item
+    {
+        margin-right: 40px;
+    }
 }
 
 @media screen and (min-width: 1200px)
@@ -1012,6 +1158,11 @@ body
     .container
     {
         max-width: 1200px;
+
+        &-statistic
+        {
+            max-width: 1240px;
+        }
     }
 
     .our-history__text-block
@@ -1035,6 +1186,20 @@ body
         {
             margin-left: 50%;
         }
+    }
+
+    .statistic__item-text
+    {
+        line-height: 37px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1241px)
+{
+    .statistic__item
+    {
+        margin-right: 51px;
     }
 }
 
