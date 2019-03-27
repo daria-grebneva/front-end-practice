@@ -19,6 +19,11 @@ body
     padding-right: 15px;
 }
 
+.navbar-toggler
+{
+    cursor: pointer;
+}
+
 .header__logo
 {
     padding: 40px 0;
@@ -240,6 +245,11 @@ body
     &_transparent
     {
         background-color: transparent;
+    }
+
+    &_grey
+    {
+        background-color: $bino-grey;
     }
 
     &_red
@@ -509,6 +519,8 @@ body
         color: $bino-red;
         text-transform: uppercase;
         margin-bottom: 4px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 
     &__item-text
@@ -859,19 +871,6 @@ body
         margin-right: 27px;
         margin-bottom: 0;
     }
-
-    .our-services__item
-    {
-        margin-bottom: 100px;
-        margin-top: 60px;
-        padding-left: 115px;
-
-        &:after
-        {
-            top: 8px;
-            left: 0;
-        }
-    }
 }
 
 @media screen and (min-width: 768px)
@@ -1138,6 +1137,95 @@ body
     .statistic__item
     {
         margin-right: 40px;
+    }
+}
+
+.our-pricing
+{
+    background: $white;
+
+    &__block
+    {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &__blocks
+    {
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    &__background
+    {
+        background-color: $bino-grey;
+        padding: 50px 0 110px;
+
+        &_red
+        {
+            background-color: $bino-red;
+        }
+    }
+
+    &__offset
+    {
+        margin-bottom: 70px;
+    }
+
+    &__title
+    {
+        text-transform: uppercase;
+        font: 24px/1.2 $open-sans;
+        color: $bino-white;
+    }
+
+    &__price,
+    &__price-kicker
+    {
+        font: 700 36px/0.556 $open-sans;
+        color: $bino-grey;
+    }
+
+    &__price
+    {
+        margin-top: 64px;
+    }
+
+    &__price-kicker
+    {
+        font-size: 12px;
+        line-height: 3px;
+    }
+
+    &__price-wrapper
+    {
+        background: url("../images/bino/pricing-bg.png") no-repeat;
+        position: absolute;
+        left: 50%;
+        width: 174px;
+        height: 172px;
+        top: 117px;
+        transform: translate(-50%, 0);
+    }
+
+    &__text
+    {
+        font: 14px/2.857 $open-sans;
+        color: $bino-grey;
+        padding: 110px 0 40px;
+
+        &-wrapper
+        {
+            background: $bino-white;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__button
+    {
+        width: 145px;
+        font-weight: 400;
     }
 }
 
