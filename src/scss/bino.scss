@@ -763,6 +763,177 @@ body
     }
 }
 
+
+.our-pricing
+{
+    background: $white;
+
+    &__block
+    {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &__blocks
+    {
+        text-align: center;
+        margin-top: 35px;
+        padding-bottom: 32px;
+    }
+
+    &__background
+    {
+        background-color: $bino-grey;
+        padding: 50px 0 110px;
+
+        &_red
+        {
+            background-color: $bino-red;
+        }
+    }
+
+    &__offset
+    {
+        margin-bottom: 70px;
+    }
+
+    &__title
+    {
+        text-transform: uppercase;
+        font: 24px/1.2 $open-sans;
+        color: $bino-white;
+    }
+
+    &__price,
+    &__price-kicker
+    {
+        font: 700 36px/0.556 $open-sans;
+        color: $bino-grey;
+    }
+
+    &__price
+    {
+        margin-top: 64px;
+    }
+
+    &__price-kicker
+    {
+        font-size: 12px;
+        line-height: 3px;
+    }
+
+    &__price-wrapper
+    {
+        background: url("../images/bino/pricing-bg.png") no-repeat;
+        position: absolute;
+        left: 50%;
+        width: 174px;
+        height: 172px;
+        top: 117px;
+        transform: translate(-50%, 0);
+    }
+
+    &__text
+    {
+        font: 14px/2.857 $open-sans;
+        color: $bino-grey;
+        padding: 115px 0 40px;
+
+        &-wrapper
+        {
+            background: $bino-white;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__button
+    {
+        width: 145px;
+        font-weight: 400;
+        padding: 15px 0;
+    }
+}
+
+.our-team
+{
+    background: $bibo-bg;
+    padding-top: 142px;
+    padding-bottom: 132px;
+
+    &__text
+    {
+        font: 300 14px/24px $source-sans;
+        letter-spacing: 1px;
+        color: $bino-white;
+        margin-top: 13px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    &__offset
+    {
+        margin-top: 50px;
+    }
+
+    &__decoration
+    {
+        margin-top: 26px;
+    }
+
+    &__member
+    {
+        content: '';
+        position: absolute;
+        width: 57px;
+        height: 56px;
+        cursor: pointer;
+
+        &-wrapper
+        {
+            position: relative;
+        }
+    }
+}
+
+.member
+{
+    &-first
+    {
+        background: url("../images/bino/team/1.png") no-repeat;
+        top: 156px;
+        left: 17px;
+    }
+
+    &-second
+    {
+        background: url("../images/bino/team/2.png") no-repeat;
+        top: 106px;
+        right: 35px;
+    }
+
+    &-third
+    {
+        background: url("../images/bino/team/3.png") no-repeat;
+        top: 104px;
+        right: 70px;
+    }
+
+    &-fourth
+    {
+        background: url("../images/bino/team/4.png") no-repeat;
+        top: 142px;
+        right: 92px;
+    }
+
+    &-fifth
+    {
+        background: url("../images/bino/team/5.png") no-repeat;
+        top: 97px;
+        right: 14px;
+    }
+}
+
 @media screen and (min-width: 451px)
 {
     .top-content
@@ -861,6 +1032,13 @@ body
                 margin-top: 0;
             }
         }
+    }
+
+    .our-team
+    {
+        background: url("../images/bino/our-team-background.png") no-repeat;
+        padding-top: 90px;
+        padding-bottom: 459px;
     }
 }
 
@@ -1137,95 +1315,6 @@ body
     .statistic__item
     {
         margin-right: 40px;
-    }
-}
-
-.our-pricing
-{
-    background: $white;
-
-    &__block
-    {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 40px;
-    }
-
-    &__blocks
-    {
-        text-align: center;
-        margin-top: 35px;
-    }
-
-    &__background
-    {
-        background-color: $bino-grey;
-        padding: 50px 0 110px;
-
-        &_red
-        {
-            background-color: $bino-red;
-        }
-    }
-
-    &__offset
-    {
-        margin-bottom: 70px;
-    }
-
-    &__title
-    {
-        text-transform: uppercase;
-        font: 24px/1.2 $open-sans;
-        color: $bino-white;
-    }
-
-    &__price,
-    &__price-kicker
-    {
-        font: 700 36px/0.556 $open-sans;
-        color: $bino-grey;
-    }
-
-    &__price
-    {
-        margin-top: 64px;
-    }
-
-    &__price-kicker
-    {
-        font-size: 12px;
-        line-height: 3px;
-    }
-
-    &__price-wrapper
-    {
-        background: url("../images/bino/pricing-bg.png") no-repeat;
-        position: absolute;
-        left: 50%;
-        width: 174px;
-        height: 172px;
-        top: 117px;
-        transform: translate(-50%, 0);
-    }
-
-    &__text
-    {
-        font: 14px/2.857 $open-sans;
-        color: $bino-grey;
-        padding: 110px 0 40px;
-
-        &-wrapper
-        {
-            background: $bino-white;
-            padding-bottom: 50px;
-        }
-    }
-
-    &__button
-    {
-        width: 145px;
-        font-weight: 400;
     }
 }
 
