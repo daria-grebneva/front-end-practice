@@ -785,7 +785,7 @@ body
     &__background
     {
         background-color: $bino-grey;
-        padding: 50px 0 110px;
+        padding: 46px 0 132px;
 
         &_red
         {
@@ -795,32 +795,37 @@ body
 
     &__offset
     {
-        margin-bottom: 70px;
+        margin-bottom: 68px;
+        padding-top: 140px;
     }
 
     &__title
     {
         text-transform: uppercase;
-        font: 24px/1.2 $open-sans;
+        font: 600 24px/1.2 $open-sans;
         color: $bino-white;
+        letter-spacing: 2px;
     }
 
     &__price,
     &__price-kicker
     {
-        font: 700 36px/0.556 $open-sans;
+        font: 700 39px/0 $source-sans;
+        letter-spacing: 1px;
         color: $bino-grey;
     }
 
     &__price
     {
-        margin-top: 64px;
+        margin-top: 75px;
+        margin-bottom: 7px;
     }
 
     &__price-kicker
     {
-        font-size: 12px;
-        line-height: 3px;
+        font-size: 14px;
+        line-height: 0;
+        letter-spacing: 0;
     }
 
     &__price-wrapper
@@ -858,8 +863,15 @@ body
 .our-team
 {
     background: $bibo-bg;
-    padding-top: 142px;
-    padding-bottom: 132px;
+    padding-top: 90px;
+
+    &__container
+    {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     &__text
     {
@@ -881,17 +893,54 @@ body
         margin-top: 26px;
     }
 
+    &__members
+    {
+        position: relative;
+        min-height: 459px;
+        margin-top: 25px;
+    }
+
     &__member
     {
         content: '';
-        position: absolute;
         width: 57px;
         height: 56px;
         cursor: pointer;
+        display: block;
+        position: relative;
+        z-index: 10;
+        margin: 0 auto;
+
+        &-info
+        {
+            width: 200px;
+            margin: 0 auto;
+            color: $white;
+            bottom: -154px;
+            left: 10px;
+        }
+
+        &-name
+        {
+            color: $bino-red;
+            display: block;
+            font: 600 28px $open-sans;
+            margin-left: 0;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        &-post
+        {
+            display: block;
+            font: 400 18px $source-sans;
+            margin-left: 0;
+            margin-top: 5px;
+        }
 
         &-wrapper
         {
-            position: relative;
+            margin-bottom: 50px;
         }
     }
 }
@@ -901,37 +950,39 @@ body
     &-first
     {
         background: url("../images/bino/team/1.png") no-repeat;
-        top: 156px;
-        left: 17px;
     }
 
     &-second
     {
         background: url("../images/bino/team/2.png") no-repeat;
-        top: 106px;
-        right: 35px;
     }
 
     &-third
     {
         background: url("../images/bino/team/3.png") no-repeat;
-        top: 104px;
-        right: 70px;
     }
 
     &-fourth
     {
         background: url("../images/bino/team/4.png") no-repeat;
-        top: 142px;
-        right: 92px;
     }
 
     &-fifth
     {
         background: url("../images/bino/team/5.png") no-repeat;
-        top: 97px;
-        right: 14px;
     }
+}
+
+.line
+{
+    display: none;
+    //display: block;
+    height: 80px;
+    border-left: 1px solid #fff;
+    margin-left: 27px;
+    width: 0;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 451px)
@@ -1008,14 +1059,104 @@ body
 
 @media screen and (min-width: 576px)
 {
+    .line
+    {
+        display: block;
+    }
+
+    .our-team
+    {
+        &__member
+        {
+            margin: unset;
+            &:hover
+            {
+                transform: scale(1.5);
+                transition: 0.5s;
+            }
+
+            &-wrapper
+            {
+                margin-bottom: 0;
+                position: absolute;
+
+                &:hover
+                {
+                    .our-team__member-info
+                    {
+                        display: inline-block;
+                        position: absolute;
+                    }
+                }
+            }
+
+            &-info
+            {
+                display: none;
+                margin: unset;
+                margin-left: -10px;
+                width: 100px;
+            }
+
+            &-name
+            {
+                margin-left: -46px;
+            }
+
+            &-post
+            {
+                margin-left: -47px;
+            }
+        }
+
+        &__members
+        {
+            margin-top: 0;
+        }
+    }
+
+    .member
+    {
+        &-first__wrapper
+        {
+            top: 42.5%;
+            left: 9.4%;
+        }
+
+        &-second__wrapper
+        {
+            top: 27.5%;
+            left: 24.8%;
+        }
+
+        &-third__wrapper
+        {
+            top: 23.5%;
+            right: 43.4%;
+        }
+
+        &-fourth__wrapper
+        {
+            top: 26%;
+            right: 21.8%;
+        }
+
+        &-fifth__wrapper
+        {
+            top: 7.3%;
+            right: 9.2%;
+        }
+    }
+
     .statistic
     {
         background: url("../images/bino/statistic-background.png") no-repeat;
         padding-top: 90px;
+        padding-bottom: 0;
 
         &__item
         {
-            margin-bottom: 145px;
+            margin-bottom: 160px;
 
             &:last-child
             {
@@ -1032,13 +1173,22 @@ body
                 margin-top: 0;
             }
         }
+
+        &__wrapper
+        {
+            margin-top: 65px;
+        }
     }
 
     .our-team
     {
         background: url("../images/bino/our-team-background.png") no-repeat;
-        padding-top: 90px;
-        padding-bottom: 459px;
+        background-size: 101% 100%;
+    }
+
+    .our-pricing__offset
+    {
+        padding-top: 0;
     }
 }
 
@@ -1139,6 +1289,7 @@ body
     .statistic
     {
         padding-top: 152px;
+        padding-bottom: 132px;
 
         &__wrapper
         {
@@ -1165,14 +1316,58 @@ body
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+    .our-pricing__block
+    {
+        max-width: 540px;
+        flex: none;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
+
 @media screen and (min-width: 992px)
 {
+    .member
+    {
+        &-first__wrapper
+        {
+            top: 34.5%;
+            left: 19.4%;
+        }
+
+        &-second__wrapper
+        {
+            top: 23.5%;
+            left: 34.8%;
+        }
+
+        &-third__wrapper
+        {
+            top: 22.5%;
+            right: 48.4%;
+        }
+
+        &-fourth__wrapper
+        {
+            top: 31%;
+            right: 33.8%;
+        }
+
+        &-fifth__wrapper
+        {
+            top: 21.3%;
+            right: 19.2%;
+        }
+    }
+
     .title_border-right
     {
         padding-right: 32px;
         position: relative;
         margin-top: -7px;
-        
+
         &:before
         {
             content: none;

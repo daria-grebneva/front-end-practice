@@ -10,6 +10,7 @@ var path = {
         html: 'src/',
         js: 'src/js/',
         css: 'src/css/',
+        bootstrap_css: 'bootstrap-4.1.3/css',
         img: 'src/img/',
         fonts: 'src/fonts/'
     },
@@ -17,6 +18,7 @@ var path = {
         html: 'src/*.html', //��������� src/*.html ������� gulp ��� �� ����� ����� ��� ����� � ����������� .html
         js: 'src/js/main.js',//� ������ � �������� ��� ����������� ������ main �����
         scss: 'src/scss/bino.scss',
+        bootstrap_scss: 'bootstrap-4.1.3/scss/bootstrap.scss',
         img: 'src/img/**/*.*', //��������� img/**/*.* �������� - ����� ��� ����� ���� ���������� �� ����� � �� ��������� ���������
         fonts: 'src/fonts/**/*.*'
     },
@@ -47,5 +49,15 @@ gulp.task('scss:build', function () {
       //  .pipe(prefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //� � build
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('bootstrap_scss:build', function () {
+    gulp.src(path.src.bootstrap_scss) //������� ��� main.scss
+        .pipe(sourcemaps.init()) //�� �� ����� ��� � � js
+        .pipe(sass()) //������������
+        //  .pipe(prefixer())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.bootstrap_css)) //� � build
         .pipe(reload({stream: true}));
 });
