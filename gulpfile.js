@@ -10,7 +10,7 @@ var path = {
         html: 'src/',
         js: 'src/js/',
         css: 'src/css/',
-        bootstrap_css: 'bootstrap-4.1.3/css',
+        bootstrap_css: 'src/css',
         img: 'src/img/',
         fonts: 'src/fonts/'
     },
@@ -18,7 +18,7 @@ var path = {
         html: 'src/*.html', //��������� src/*.html ������� gulp ��� �� ����� ����� ��� ����� � ����������� .html
         js: 'src/js/main.js',//� ������ � �������� ��� ����������� ������ main �����
         scss: 'src/scss/bino.scss',
-        bootstrap_scss: 'bootstrap-4.1.3/scss/bootstrap.scss',
+        bootstrap_scss: 'bootstrap-4.3.1/scss/bootstrap.scss',
         img: 'src/img/**/*.*', //��������� img/**/*.* �������� - ����� ��� ����� ���� ���������� �� ����� � �� ��������� ���������
         fonts: 'src/fonts/**/*.*'
     },
