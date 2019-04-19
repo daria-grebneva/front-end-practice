@@ -674,7 +674,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-6 col-md-12 our-blog__item">
-                    <div class="our-blog__text-wrapper our-blog__text-wrapper_arrow-left arrow-left__reverse our-blog_right">
+                    <div class="our-blog__text-wrapper our-blog__text-wrapper_arrow-left arrow-left__reverse our-blog_right our-blog_mobile-order">
                         <span class="our-blog__item-kicker">art / t-shirt</span>
                         <div class="our-blog__item-title">T-SHIRT DESIGN</div>
                         <p class="our-blog__item-text">
@@ -685,7 +685,7 @@
                     <img class="our-blog__image " src="src/images/bino/road.png" alt="road" />
                 </div>
                 <div class="col-lg-6 col-md-12 our-blog__item">
-                    <div class="our-blog__text-wrapper our-blog__text-wrapper_arrow-right">
+                    <div class="our-blog__text-wrapper our-blog__text-wrapper_arrow-right our-blog_mobile-order">
                         <span class="our-blog__item-kicker">art / t-shirt</span>
                         <div class="our-blog__item-title">T-SHIRT DESIGN</div>
                         <p class="our-blog__item-text">
@@ -701,8 +701,8 @@
     <div class="keep-in-touch">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center our-blog__offset">
-                    <h2 class="title title_dark our-blog__title">Keep in touch</h2>
+                <div class="col-lg-12 text-center keep-in-touch__offset">
+                    <h2 class="title title_dark keep-in-touch__main-title">Keep in touch</h2>
                     <div class="text-kicker">
                         Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.
                     </div>
@@ -710,32 +710,31 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 keep-in-touch__item">
+                        <div class="col-lg-5 keep-in-touch__item">
                             <div class="keep-in-touch__title">our address</div>
-                            <p class="keep-in-touch__text">
+                            <span class="keep-in-touch__text">
                                 House #13, Streat road, Sydney
+                                <br />
                                 2310 Australia
-                            </p>
+                            </span>
                             <div class="keep-in-touch__title">call us</div>
-                            <p class="keep-in-touch__text">
+                            <span class="keep-in-touch__text">
                                 + 880 168 109 1425
                                 <br />
                                 + 0216809142
-                            </p>
+                            </span>
                             <div class="keep-in-touch__title">email us</div>
-                            <p class="keep-in-touch__text">
-                                contactus@email.com
-                            </p>
+                            <a href="/" title="contact us" class="keep-in-touch__text">contactus@email.com</a>
                         </div>
                         <div class="col-lg-6 offset-lg-0 keep-in-touch__item">
-                            <form action="">
-                                <p>
+                            <form method="post">
+                                <div>
                                     <input class="keep-in-touch__field" type="input" name="name" placeholder="Name" />
                                     <input class="keep-in-touch__field" type="input" name="email" placeholder="Email" />
                                     <input class="keep-in-touch__field" type="input" name="subject" placeholder="Subject" />
                                     <input class="keep-in-touch__field" type="input" name="message" placeholder="Message" />
-                                </p>
-                                <button type="submit" name="proceed" value="send message" class="button button_red">send message</button>
+                                </div>
+                                <button type="submit" name="proceed" value="send message" class="button button_red keep-in-touch__button">send message</button>
                             </form>
                         </div>
                     </div>
@@ -759,7 +758,7 @@
     </div>
     <div class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row footer__wrapper">
                 <ul class="footer__icons col-sm-7 col-xs-12 text-xs-center">
                     <li class="footer__icon icon-facebook"></li>
                     <li class="footer__icon icon-twitter"></li>

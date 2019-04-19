@@ -786,6 +786,7 @@ body
     {
         background-color: $bino-grey;
         padding: 46px 0 132px;
+        max-height: 206px;
 
         &_red
         {
@@ -987,7 +988,7 @@ body
 .great-integrations
 {
     background-color: $background-white-blue;
-    padding-bottom: 150px;
+    padding-bottom: 0;
 
     &__title
     {
@@ -1037,7 +1038,7 @@ body
 
         &-wrapper
         {
-            width: 44.5%;
+            width: 38.5%;
             margin-right: 13px;
             margin-left: 13px;
             display: inline-flex;
@@ -1102,20 +1103,20 @@ body
 
     &_right
     {
-        order: 1;
-    }
-
-    &_left
-    {
         order: 0;
     }
 
     &__image
     {
-        width: 50%;
+        width: 100%;
         float: left;
-        height: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
 
+    &_mobile-order
+    {
+        order: 1;
     }
 
     &__text
@@ -1123,9 +1124,9 @@ body
         &-wrapper
         {
             background-color: $bino-red;
-            height: 100%;
-            padding: 37px 27px 27px 50px;
-            width: 50%;
+            height: 50%;
+            padding: 37px 27px 0 50px;
+            width: 100%;
             float: left;
 
             &_arrow-left
@@ -1133,14 +1134,13 @@ body
                 &:before
                 {
                     content: '';
-                    display: block;
+                    display: none;
                     border: 34px solid transparent;
                     border-right-color: $bino-red;
                     position: absolute;
-                    left: -13.9%;
                     top: 43%;
                     z-index: 10;
-                    right: 49.5%;
+                    right: 64.5%;
                 }
             }
 
@@ -1149,12 +1149,12 @@ body
                 &:after
                 {
                     content: '';
-                    display: block;
+                    display: none;
                     border: 34px solid transparent;
                     border-left-color: $bino-red;
                     position: absolute;
                     top: 43%;
-                    left: 49.5%;
+                    left: 64.5%;
                     z-index: 10;
                 }
             }
@@ -1168,6 +1168,7 @@ body
         padding-right: 0;
         padding-left: 0;
         display: flex;
+        flex-direction: column;
 
         &-kicker
         {
@@ -1222,6 +1223,7 @@ body
                 text-decoration: none;
                 text-underline: none;
                 cursor: pointer;
+                color: $white;
             }
         }
     }
@@ -1233,13 +1235,36 @@ body
     background-color: $background-white-blue;
     padding-bottom: 125px;
 
+    &__button
+    {
+        width: 158px;
+        padding: 14px 0;
+    }
+
+    &__main-title
+    {
+        letter-spacing: 0;
+    }
+
+    &__offset
+    {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+
     &__item
     {
         background: $white;
-        min-height: 535px;
-        padding: 75px 30px 0 75px;
+        max-width: 100%;
+        padding: 75px 30px 70px 90px;
         margin-left: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 32px;
+
+        &:last-child
+        {
+            padding-top: 84px;
+            padding-left: 97px;
+        }
     }
 
     &__title
@@ -1249,6 +1274,12 @@ body
         color: $bino-red;
         text-transform: uppercase;
         padding-bottom: 15px;
+        padding-top: 52px;
+
+        &:first-child
+        {
+            padding-top: 7px;
+        }
     }
 
     &__text
@@ -1257,6 +1288,12 @@ body
         letter-spacing: 0;
         color: $bino-grey;
         padding-bottom: 35px;
+
+        &:hover
+        {
+            text-decoration: none;
+            color: $bino-grey;
+        }
     }
 
     &__field
@@ -1268,14 +1305,14 @@ body
         margin: 0 0 23px;
         border-bottom: 1px solid $bino-white;
         color: $bino-grey;
-        font: 400 16px/16px $open-sans;
+        font: 400 14px/27px $open-sans;
         padding: 0 0 10px;
         width: 100%;
 
         &:last-child
         {
-            padding-bottom: 105px;
-            margin-bottom: 55px;
+            padding-bottom: 92px;
+            margin-bottom: 29px;
         }
     }
 }
@@ -1311,6 +1348,100 @@ body
     {
         margin-top: 34px;
         margin-bottom: 35px;
+    }
+}
+
+
+.footer
+{
+    background: $bino-black;
+    padding-top: 36px;
+    padding-bottom: 8px;
+
+    &__icons
+    {
+        max-width: 100%;
+    }
+
+    &__icon
+    {
+        list-style: none;
+        display: inline-block;
+        padding-right: 30px;
+        cursor: pointer;
+    }
+
+    &__text
+    {
+        font: 700 14px $open-sans;
+        color: $bino-grey-light;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    &__wrapper
+    {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.icon
+{
+    &-facebook
+    {
+        background: url("../images/bino/icon/social/facebook.png") no-repeat;
+        width: 10px;
+        height: 25px;
+    }
+
+    &-twitter
+    {
+        background: url("../images/bino/icon/social/twitter.png") no-repeat;
+        width: 38px;
+        height: 25px;
+    }
+
+    &-rss
+    {
+        background: url("../images/bino/icon/social/rss.png") no-repeat;
+        width: 34px;
+        height: 25px;
+    }
+
+    &-google
+    {
+        background: url("../images/bino/icon/social/google.png") no-repeat;
+        width: 32px;
+        height: 25px;
+    }
+
+    &-linkedin
+    {
+        background: url("../images/bino/icon/social/linkedin.png") no-repeat;
+        width: 36px;
+        height: 25px;
+    }
+
+    &-skype
+    {
+        background: url("../images/bino/icon/social/skype.png") no-repeat;
+        width: 35px;
+        height: 25px;
+    }
+
+    &-vimeo
+    {
+        background: url("../images/bino/icon/social/vimeo.png") no-repeat;
+        width: 39px;
+        height: 25px;
+    }
+
+    &-tumblr
+    {
+        background: url("../images/bino/icon/social/tumblr.png") no-repeat;
+        width: 10px;
+        height: 25px;
     }
 }
 
@@ -1403,7 +1534,6 @@ body
         }
     }
 }
-
 @media screen and (min-width: 576px)
 {
     .line
@@ -1540,90 +1670,51 @@ body
         padding-top: 0;
     }
 
-    .free-trial__title
+    .our-blog
     {
-        line-height: 15px;
-    }
-}
+        &__item
+        {
+            flex-direction: row;
+        }
 
-.footer
-{
-    background: $bino-black;
-    padding-top: 36px;
-    padding-bottom: 8px;
+        &__image
+        {
+            width: 35%;
+            height: 100%;
+        }
 
-    &__icon
-    {
-        list-style: none;
-        display: inline-block;
-        padding-right: 30px;
-        cursor: pointer;
-    }
+        &__text-wrapper
+        {
+            width: 65%;
+            height: 100%;
+            padding-bottom: 27px;
 
-    &__text
-    {
-        font: 700 14px $open-sans;
-        color: $bino-grey-light;
-        text-align: right;
-    }
-}
+            &_arrow-left
+            {
+                &:before
+                {
+                    display: block;
+                }
+            }
 
-.icon
-{
-    &-facebook
-    {
-        background: url("../images/bino/icon/social/facebook.png") no-repeat;
-        width: 10px;
-        height: 25px;
-    }
+            &_arrow-right
+            {
+                &:after
+                {
+                    display: block;
+                }
+            }
+        }
 
-    &-twitter
-    {
-        background: url("../images/bino/icon/social/twitter.png") no-repeat;
-        width: 38px;
-        height: 25px;
-    }
+        &_mobile-order
+        {
+            order: 0;
+        }
 
-    &-rss
-    {
-        background: url("../images/bino/icon/social/rss.png") no-repeat;
-        width: 34px;
-        height: 25px;
-    }
-
-    &-google
-    {
-        background: url("../images/bino/icon/social/google.png") no-repeat;
-        width: 32px;
-        height: 25px;
-    }
-
-    &-linkedin
-    {
-        background: url("../images/bino/icon/social/linkedin.png") no-repeat;
-        width: 36px;
-        height: 25px;
-    }
-
-    &-skype
-    {
-        background: url("../images/bino/icon/social/skype.png") no-repeat;
-        width: 35px;
-        height: 25px;
-    }
-
-    &-vimeo
-    {
-        background: url("../images/bino/icon/social/vimeo.png") no-repeat;
-        width: 39px;
-        height: 25px;
-    }
-
-    &-tumblr
-    {
-        background: url("../images/bino/icon/social/tumblr.png") no-repeat;
-        width: 10px;
-        height: 25px;
+        &_right
+        {
+            order: 1;
+        }
     }
 }
 
@@ -1633,6 +1724,14 @@ body
     {
         margin-right: 27px;
         margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 618px)
+{
+    .free-trial__title
+    {
+        line-height: 15px;
     }
 }
 
@@ -1756,6 +1855,55 @@ body
             width: 30.5%;
         }
     }
+
+    .our-blog
+    {
+        &__image
+        {
+            width: 50%;
+        }
+
+        &__text-wrapper
+        {
+            width: 50%;
+
+            &_arrow-left
+            {
+                &:before
+                {
+                   right: 49.5%;
+                }
+            }
+
+            &_arrow-right
+            {
+                &:after
+                {
+                    left: 49.5%;
+                }
+            }
+        }
+    }
+
+    .footer
+    {
+        &__icons
+        {
+            max-width: inherit;
+        }
+
+        &__text
+        {
+            text-align: right;
+            max-width: inherit;
+        }
+
+        &__wrapper
+        {
+            text-align: left;
+            flex-direction: row;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px)
@@ -1810,10 +1958,40 @@ body
         }
     }
 
-    .our-blog_right
+    .our-blog
     {
-        order: 0;
+        &_right
+        {
+            order: 0;
+        }
+
+        &__image
+        {
+            width: 40%;
+        }
+
+        &__text-wrapper
+        {
+            width: 65%;
+
+            &_arrow-left
+            {
+                &:before
+                {
+                    right: 59.5%;
+                }
+            }
+
+            &_arrow-right
+            {
+                &:after
+                {
+                    left: 59.5%;
+                }
+            }
+        }
     }
+
 
     .arrow-left
     {
@@ -1827,7 +2005,7 @@ body
                 border-left-color: $bino-red;
                 position: absolute;
                 top: 43%;
-                left: 49.5%;
+                left: 59.5%;
                 z-index: 10;
             }
 
@@ -1849,10 +2027,9 @@ body
                 border: 34px solid transparent;
                 border-right-color: $bino-red;
                 position: absolute;
-                left: -13.9%;
                 top: 43%;
                 z-index: 10;
-                right: 49.5%;
+                right: 59.5%;
             }
 
             &:after
@@ -1932,7 +2109,7 @@ body
 
         &__container
         {
-            width: 54.35%;
+            width: 55.35%;
             padding: 0 60px 60px 60px;
         }
 
@@ -2020,6 +2197,22 @@ body
             width: 17.5%;
         }
     }
+
+    .keep-in-touch
+    {
+        &__item
+        {
+            &:first-child
+            {
+                max-width: 39%;
+            }
+
+            &:last-child
+            {
+                max-width: 69%;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1200px)
@@ -2072,6 +2265,8 @@ body
 
     .great-integrations
     {
+        padding-bottom: 150px;
+
         &__item-wrapper
         {
             &:first-child
@@ -2097,6 +2292,58 @@ body
     .statistic__item
     {
         margin-right: 51px;
+    }
+
+    .our-blog
+    {
+        &__image
+        {
+            width: 50%;
+        }
+
+        &__text-wrapper
+        {
+            width: 50%;
+
+            &_arrow-left
+            {
+                &:before
+                {
+                    right: 49.5%;
+                }
+            }
+
+            &_arrow-right
+            {
+                &:after
+                {
+                    left: 49.5%;
+                }
+            }
+        }
+    }
+
+
+    .arrow-left
+    {
+        &__reverse
+        {
+            &:after
+            {
+                left: 49.5%;
+            }
+        }
+    }
+
+    .arrow-right
+    {
+        &__reverse
+        {
+            &:before
+            {
+                right: 49.5%;
+            }
+        }
     }
 }
 
